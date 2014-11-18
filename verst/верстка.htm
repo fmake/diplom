@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html style="" class=" bx-no-touch bx-no-retina bx-firefox bx-boxshadow bx-borderradius bx-flexwrap bx-boxdirection bx-transition bx-transform js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Список обращений</title>
+        <style>
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Thin-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Thin-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+                font-weight: 100;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Light-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Light-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Light-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+                font-weight: 300;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-LightItalic-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-LightItalic-webfont.svg#robotolight_italic') format('svg');
+                font-weight: 300;
+                font-style: italic;
+            }
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Regular-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Regular-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Medium-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Medium-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+                font-weight: 500;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Bold-webfont.eot');
+                src: url('/bitrix/templates/future-group/css/future/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Bold-webfont.woff') format('woff'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+                url('/bitrix/templates/future-group/css/future/fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+                font-weight: 700;
+                font-style: normal;
+            }
+        </style>
+        <link rel="shortcut icon" href="http://future-group.ru/favicon.ico">
+        <link rel="apple-touch-icon" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="80x80" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-80x80.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-114x114.png">
+
+        <link rel="apple-touch-icon-precomposed" sizes="android-only" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-57x57.png">
+
+        <link rel="apple-touch-startup-image" href="http://future-group.ru/bitrix/templates/future-group_new/images/apple-touch-icon-114x114.png">
+        <script src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/watch.js" async="" type="text/javascript"></script><script src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/ba.js" async="" type="text/javascript"></script><script>/*
+            (function(){
+                function addFont() {
+                    var style = document.createElement('style');
+                    style.rel = 'stylesheet';
+                    document.head.appendChild(style);
+                    style.textContent = localStorage.robotoFuture;
+                }
+                try{
+                    if(localStorage.robotoFuture){
+                        console.log('font found');
+                        addFont();
+                    } else {
+                        var request = new XMLHttpRequest();
+                        request.open('GET','/bitrix/templates/future-group/css/future/asyncFonts.css', true);
+                        request.onload = function(){
+                            if(request.status >= 200 && request.status < 400){
+                                localStorage.robotoFuture = request.responseText;
+
+                                addFont();
+                            }
+                        };
+                        request.send();
+                    }
+                } catch (ex){
+                    console.log(ex);
+                }
+            }());*/
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/kernel_main.css" type="text/css" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/sticker.css" type="text/css" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/core_panel.css" type="text/css" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/page_a9b5f6ad2b8be61cdb487b1da3b9824d.css" type="text/css" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/pubstyles.css" type="text/css" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/template_629f43a6d9adeef5a2ac57e08749f7e0.css" type="text/css" data-template-style="true" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/popup.css" type="text/css" data-template-style="true" rel="stylesheet">
+<link href="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/admin-public.css" type="text/css" data-template-style="true" rel="stylesheet">
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "ccb6434bbfbd8c3dab8d957bc5360e20"]);(function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = document.location.protocol + "//bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+<script type="text/javascript">(window.BX||top.BX).message({'ADMIN_INCLAREA_DBLCLICK':'Двойной щелчок','ADMIN_SHOW_MODE_ON':'включен','ADMIN_SHOW_MODE_OFF':'выключен','AMDIN_SHOW_MODE_TITLE':'Режим правки','ADMIN_SHOW_MODE_ON_HINT':'Режим правки включен. На странице доступны элементы управления компонентами и включаемыми областями.','ADMIN_SHOW_MODE_OFF_HINT':'Режим правки выключен'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','USER_ID':'1','SERVER_TIME':'1416231448','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'30ae1f3da3ab7ca7e257bf508fa5ac7e'});</script>
+
+
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/kernel_main.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/popup_menu.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/kernel_pull.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/sticker.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/core_admin.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/admin_tools.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/admin_search.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/hot_keys.js"></script>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/public_tools.js"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?141570866088119','/bitrix/js/main/core/core_ajax.js?141570866035166','/bitrix/js/main/json/json2.min.js?14049950393467','/bitrix/js/main/core/core_ls.js?140499503910330','/bitrix/js/main/session.js?14110219153170','/bitrix/js/main/core/core_window.js?140715085596525','/bitrix/js/main/utils.js?140499503930972','/bitrix/js/main/dd.js?140499503913708','/bitrix/js/pull/pull.js?141570909734937','/bitrix/templates/future-group_new/components/bitrix/support.ticket/dev_template/bitrix/support.ticket.list/.default/script.js?14121592592700','/bitrix/templates/future-group_new/components/bitrix/main.interface.grid/future/script.js?140715085538524','/bitrix/templates/future-group_new/js/vendor/jquery.js?141526340795786','/bitrix/templates/future-group_new/js/vendor/jquery.mousewheel.min.js?14138092582777','/bitrix/templates/future-group_new/js/amcharts/amcharts.js?1410361271184681','/bitrix/templates/future-group_new/js/amcharts/serial.js?141036126726839','/bitrix/templates/future-group_new/js/amcharts/none.js?141036127126','/bitrix/templates/future-group_new/js/vendor/modernizr.js?140499671111252','/bitrix/templates/future-group_new/js/foundation.min.js?140499670977674','/bitrix/templates/future-group_new/js/foundation/foundation.accordion.js?14049967131526','/bitrix/templates/future-group_new/js/foundation/foundation.tab.js?14049967151666','/bitrix/templates/future-group_new/js/foundation/foundation.equalizer.js?14097391672043','/bitrix/templates/future-group_new/js/future/waypoints.min.js?14134671798044','/bitrix/templates/future-group_new/js/future/scripts.js?141588193724580']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14049950398964','/bitrix/templates/future-group_new/components/bitrix/support.ticket/dev_template/bitrix/support.ticket.list/.default/style.css?14121583179494','/bitrix/components/bitrix/system.pagenavigation/templates/modern/style.css?1404995041744','/bitrix/templates/future-group_new/components/bitrix/main.interface.grid/future/style.css?141113774914273','/bitrix/templates/future-group_new/components/bitrix/main.interface.grid/future/themes/grey/style.css?14049950416281','/bitrix/templates/future-group_new/components/bitrix/menu/adaptive/style.css?1405000828626','/bitrix/templates/future-group_new/styles.css?14049988431','/bitrix/templates/future-group_new/css/future/animate.css?141346914853431','/bitrix/templates/future-group_new/css/future/main.css?1415894933189776']); </script>
+
+<script type="text/javascript">
+var phpVars = {
+	'ADMIN_THEME_ID': '.default',
+	'LANGUAGE_ID': 'ru',
+	'FORMAT_DATE': 'DD.MM.YYYY',
+	'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+	'opt_context_ctrl': false,
+	'cookiePrefix': 'BITRIX_SM',
+	'titlePrefix': 'Future - ',
+	'bitrix_sessid': '30ae1f3da3ab7ca7e257bf508fa5ac7e',
+	'messHideMenu': 'Скрыть меню',
+	'messShowMenu': 'Показать меню',
+	'messHideButtons': 'Уменьшить кнопки',
+	'messShowButtons': 'Увеличить кнопки',
+	'messFilterInactive': 'Поиск не используется - показаны все записи',
+	'messFilterActive': 'Используется поиск - показаны только найденные записи',
+	'messFilterLess': 'Скрыть условие поиска',
+	'messLoading': 'Загрузка...',
+	'messMenuLoading': 'Загрузка...',
+	'messMenuLoadingTitle': 'Загружаются пункты меню...',
+	'messNoData': '- Нет данных -',
+	'messExpandTabs': 'Развернуть все вкладки на одну страницу',
+	'messCollapseTabs': 'Свернуть вкладки',
+	'messPanelFixOn': 'Зафиксировать панель на экране',
+	'messPanelFixOff': 'Открепить панель',
+	'messPanelCollapse': 'Скрыть панель',
+	'messPanelExpand': 'Показать панель'
+};
+</script>
+
+
+
+
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/template_4ebb959c0c420516fcc11e1e260409dd.js"></script><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large"><meta class="foundation-mq-medium"><meta class="foundation-mq-small"><style></style><style type="text/css">input[type="checkbox"]{ display: none; }  .disabled { opacity: 0.5; filter: alpha(opacity=50); }</style>
+<script type="text/javascript" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/page_d47f74840bbfd13ebfbc3b4fb0f53b84.js"></script>
+<script type="text/javascript">
+bxSession.mess.messSessExpired = 'Ваш сеанс работы с сайтом завершен из-за отсутствия активности в течение 15 мин. Введенные на странице данные не будут сохранены. Скопируйте их перед тем, как закроете или обновите страницу.';
+bxSession.Expand(900, '30ae1f3da3ab7ca7e257bf508fa5ac7e', true, 'dccb087c1857281851071b1e9361b332');
+</script>
+<script type="text/javascript">BX.bind(window, "load", function() { BX.PULL.start({'CHANNEL_ID':'352b8efcd82423c6dd3d6939a75777f3','LAST_ID':'0','CHANNEL_DT':'1416209502','PATH':'/bitrix/components/bitrix/pull.request/ajax.php?UPDATE_STATE','PATH_WS':'','PATH_COMMAND':'','METHOD':'PULL'}); });</script>
+
+
+
+                <style>
+            html>/**/body .cir-line-container .cl-item .number , x:-moz-any-link, x:default {
+                line-height: 28px !important;
+            }
+        </style>
+        
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+        <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+        <![endif]-->
+
+    <meta class="foundation-mq-topbar"></head>
+<body>
+
+<div class="off-canvas-wrap">
+    <div class="row fixed-bottom"><div class="pos-r fill"><div class="b-btn-to-top animated"></div></div></div>
+    <div class="inner-wrap">
+    <div id="panel">
+	<!--[if lte IE 7]>
+	<style type="text/css">#bx-panel {display:none !important;}</style>
+	<div id="bx-panel-error">Административная панель не поддерживает Internet Explorer версии 7 и ниже. Установите современный браузер <a href="http://www.firefox.com">Firefox</a>, <a href="http://www.google.com/chrome/">Chrome</a>, <a href="http://www.opera.com">Opera</a> или <a href="http://www.microsoft.com/windows/internet-explorer/">Internet Explorer 8</a>.</div><![endif]-->
+	<script type="text/javascript">BX.admin.dynamic_mode=false; BX.admin.dynamic_mode_show_borders = false;</script>
+	<div style="display:none; overflow:hidden;" id="bx-panel-back"></div>
+	<div unselectable="on" id="bx-panel" class="bx-panel-folded bx-unselectable">
+		<div id="bx-panel-top">
+			<div id="bx-panel-top-gutter"></div>
+			<div id="bx-panel-tabs">
+	
+				<a id="bx-panel-menu" href="" onmouseover="BX.hint(this, 'Меню', 'Быстрый переход на любую страницу Административной части.')"><span id="bx-panel-menu-icon"></span><span id="bx-panel-menu-text">Меню</span></a><a id="bx-panel-view-tab"><span>Сайт</span></a><a id="bx-panel-admin-tab" href="http://future-group.ru/bitrix/admin/index.php?lang=ru&amp;back_url_pub=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes"><span>Администрирование</span></a><script type="text/javascript">BX.message({MENU_ENABLE_TOOLTIP: false}); new BX.COpener({'DIV':'bx-panel-menu','ACTIVE_CLASS':'bx-pressed','MENU_URL':'/bitrix/admin/get_start_menu.php?lang=ru&back_url_pub=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e','MENU_PRELOAD':true});</script><script type="text/javascript"> BXHotKeys.Add("", "var d=BX(\"bx-panel-menu\"); if (d) d.click();", 91, 'Меню', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "var d=BX(\'bx-panel-admin-tab\'); if (d) location.href = d.href;", 92, 'Администрирование', 0); </script><a class="adm-header-notif-block" id="adm-header-notif-block" onclick="return BX.adminInformer.Toggle(this);" href="" title="Просмотр уведомлений"><span class="adm-header-notif-icon"></span><span id="adm-header-notif-counter" class="adm-header-notif-counter">3</span></a><a id="bx-panel-clear-cache" href="" onclick="BX.clearCache(); return false;"><span id="bx-panel-clear-cache-icon"></span><span id="bx-panel-clear-cache-text">Сбросить кеш</span></a>
+			</div>
+			<div id="bx-panel-userinfo">
+	<a href="http://future-group.ru/bitrix/admin/user_edit.php?lang=ru&amp;ID=1" id="bx-panel-user" onmouseover="BX.hint(this, 'Быстрый переход на страницу редактирования параметров пользователя.')"><span id="bx-panel-user-icon"></span><span id="bx-panel-user-text">Future</span></a><a href="http://future-group.ru/personal/support/?logout=yes&amp;login=yes" id="bx-panel-logout" onmouseover="BX.hint(this, 'Выход пользователя из системы. (&amp;nbsp;Ctrl+Alt+O&amp;nbsp;) ')">Выйти</a><a href="http://future-group.ru/personal/support/?bitrix_include_areas=Y&amp;login=yes" id="bx-panel-toggle" class="bx-panel-toggle-off" onmouseover="BX.hint(this, 'Режим правки', 'Включение режима контекстного редактирования сайта. При включенном режиме наведите курсор на выбранный блок информации и используйте всплывающие панели инструментов. (&amp;nbsp;Ctrl+Alt+D&amp;nbsp;) ')"><span id="bx-panel-switcher-gutter-left"></span><span id="bx-panel-toggle-indicator"><span id="bx-panel-toggle-icon"></span><span id="bx-panel-toggle-icon-overlay"></span></span><span class="bx-panel-break"></span><span id="bx-panel-toggle-caption">Режим правки</span><span class="bx-panel-break"></span><span id="bx-panel-toggle-caption-mode"><span id="bx-panel-toggle-caption-mode-off">выключен</span><span id="bx-panel-toggle-caption-mode-on">включен</span></span><span id="bx-panel-switcher-gutter-right"></span></a><a href="" id="bx-panel-expander" onmouseover="BX.hint(this, 'Развернуть', 'Развернуть Панель управления. (&amp;nbsp;Ctrl+Alt+E&amp;nbsp;) ')"><span id="bx-panel-expander-text">Развернуть</span><span id="bx-panel-expander-arrow"></span></a><a id="bx-panel-hotkeys" href="javascript:void(0)" onclick="BXHotKeys.ShowSettings();" onmouseover="BX.hint(this, 'Настройки горячих клавиш (&amp;nbsp;Ctrl+Alt+P&amp;nbsp;) ')"></a><a href="javascript:void(0)" id="bx-panel-pin" onmouseover="BX.hint(this, 'Фиксация Панели управления в верхней части экрана.')"></a><script type="text/javascript"> BXHotKeys.Add("Ctrl+Alt+79", "var d=BX(\'bx-panel-logout\'); if (d) location.href = d.href;", 133, 'Выход пользователя из системы.', 19); </script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Alt+68", "location.href=\"/personal/support/?bitrix_include_areas=Y&login=yes\";", 117, 'Режим правки', 16); </script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Alt+69", "var d=BX(\'bx-panel-expander\'); if (d) BX.fireEvent(d, \'click\');", 118, 'Развернуть/Свернуть', 21); </script>
+			</div>
+		</div>
+	<div id="bx-panel-site-toolbar"><div id="bx-panel-buttons-gutter"></div><div id="bx-panel-switcher"><a href="" id="bx-panel-hider" onmouseover="BX.hint(this, 'Свернуть', 'Свернуть Панель управления. (&amp;nbsp;Ctrl+Alt+E&amp;nbsp;) ')">Свернуть<span id="bx-panel-hider-arrow"></span></a></div><div id="bx-panel-buttons"><div id="bx-panel-buttons-inner"><span class="bx-panel-button-group" data-group-id="0"><script type="text/javascript"> BXHotKeys.Add("", "", 111, '<b>Создать страницу</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()", 60, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Создать страницу', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/workflow_edit.php?lang=ru&site=s1&fname=/personal/support/untitled.php&template=standart.php&return_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')", 108, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Через документооборот', 0); </script><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="javascript:void(0)" onclick="(new BX.CDialog({'content_url':'/bitrix/admin/public_file_new.php?lang=ru&amp;site=s1&amp;templateID=future-group_new&amp;path=%2Fpersonal%2Fsupport%2F&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes','width':'','height':'','min_width':'450','min_height':'250'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_create"><span class="bx-panel-button-icon bx-panel-create-page-icon"></span></a><a id="bx_topmenu_btn_create_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Создать<span class="bx-panel-break"></span>страницу&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_create', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Создать страницу','TEXT':'Создание страниц с помощью мастера.'}, GROUP_ID : 0, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_create_menu', TYPE: 'BIG', MENU: [{'TEXT':'Создать страницу','TITLE':'Мастер создания новой страницы','ICON':'panel-new-file','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','DEFAULT':true,'SORT':'10','HK_ID':'top_panel_create_page'},{'TEXT':'По шаблону','TITLE':'Мастер создания страницы по выбранному шаблону','ICON':'panel-new-file-template','MENU':[{'TEXT':'Стандартная страница','TITLE':'Шаблон standard.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?page_template=standard.php&lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'},{'TEXT':'Включаемая область для страницы','TITLE':'Шаблон page_inc.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?page_template=page_inc.php&lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'},{'TEXT':'Включаемая область для раздела','TITLE':'Шаблон sect_inc.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?page_template=sect_inc.php&lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'}],'SORT':'20'},{'SEPARATOR':true,'SORT':'49'},{'SRC':'/bitrix/images/workflow/new_page.gif','TEXT':'Через документооборот','TITLE':'Создать новую страницу в текущем разделе через документооборот','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/workflow_edit.php?lang=ru&site=s1&fname=/personal/support/untitled.php&template=standart.php&return_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')','HK_ID':'FLOW_PANEL_CREATE_WITH_WF','SORT':'50'},{'SEPARATOR':true,'SORT':'99'},{'TEXT':'В панели управления','TITLE':'Создать новую страницу','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/fileman_html_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&new=Y&templateID=future-group_new&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')','SORT':'100'}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Создать страницу','TEXT':'Нажмите на эту кнопку, чтобы запустить мастер или шаблон создания страниц или включаемых областей для страниц. С помощью этих мастеров, можно создать страницу или включаемую область, последовательно внося данные на каждом шаге мастера.'}, GROUP_ID : 0, TEXT :  "Создать страницу"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 112, '<b>Создать раздел</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()", 62, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Создать раздел', 0); </script><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="javascript:void(0)" onclick="(new BX.CDialog({'content_url':'/bitrix/admin/public_file_new.php?lang=ru&amp;site=s1&amp;templateID=future-group_new&amp;newFolder=Y&amp;path=%2Fpersonal%2Fsupport%2F&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes','width':'','height':'','min_width':'450','min_height':'250'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_create_section"><span class="bx-panel-button-icon bx-panel-create-section-icon"></span></a><a id="bx_topmenu_btn_create_section_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Создать<span class="bx-panel-break"></span>раздел&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_create_section', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Создать раздел','TEXT':'Создание разделов с помощью мастера.'}, GROUP_ID : 0, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_create_section_menu', TYPE: 'BIG', MENU: [{'TEXT':'Создать раздел','TITLE':'Мастер создания нового раздела','ICON':'panel-new-folder','DEFAULT':true,'ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','SORT':'10','HK_ID':'top_panel_create_folder'},{'TEXT':'По шаблону','TITLE':'Мастер создания нового раздела с индексной страницей по шаблону','ICON':'panel-new-folder-template','MENU':[{'TEXT':'<b>Форум (ЧПУ)<\/b><br>Страница с форумами в режиме ЧПУ','TITLE':'Шаблон forum','ICON':'','IMAGE':'/bitrix/themes/.default/start_menu/forum/forum.gif','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?newFolder=Y&wiz_template=forum&lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'},{'SEPARATOR':true},{'TEXT':'Стандартная страница','TITLE':'Шаблон standard.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?newFolder=Y&page_template=standard.php&lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'},{'TEXT':'Включаемая область для страницы','TITLE':'Шаблон page_inc.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?newFolder=Y&page_template=page_inc.php&lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'},{'TEXT':'Включаемая область для раздела','TITLE':'Шаблон sect_inc.php','ICON':'panel-new-file-template','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_new.php?newFolder=Y&page_template=sect_inc.php&lang=ru&site=s1&templateID=future-group_new&newFolder=Y&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()'}],'SORT':'20'},{'SEPARATOR':true,'SORT':'99'},{'TEXT':'В панели управления','TITLE':'Создать новый раздел','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/fileman_newfolder.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')'}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Создать раздел','TEXT':'Нажмите на эту кнопку, чтобы запустить мастер или шаблон создания разделов или включаемых областей для разделов. С помощью этих мастеров, можно создать страницу или включаемую область, последовательно внося данные на каждом шаге мастера.'}, GROUP_ID : 0, TEXT :  "Создать раздел"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 107, '<b>Изменить страницу</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit.php?lang=ru&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&templateID=future-group_new\',\'width\':\'780\',\'height\':\'470\',\'min_width\':\'780\',\'min_height\':\'400\'})).Show()", 63, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В визуальном редакторе', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_property.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()", 64, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Заголовок и свойства страницы', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit.php?lang=ru&noeditor=Y&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'780\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()", 65, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В режиме HTML-кода', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&templateID=future-group_new\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()", 67, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В режиме PHP-кода', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_delete.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php\',\'width\':\'440\',\'height\':\'180\',\'min_width\':\'250\',\'min_height\':\'180\'})).Show()", 68, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Удалить страницу', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/workflow_edit.php?lang=ru&site=s1&fname=/personal/support/index.php&return_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')", 109, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Через документооборот', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/workflow_history_list.php?lang=ru&find_filename=%2Fpersonal%2Fsupport%2Findex.php&find_filename_exact_match=Y&set_filter=Y\')", 110, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;История изменений страницы', 0); </script></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="1"><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="javascript:void(0)" onclick="(new BX.CEditorDialog({'content_url':'/bitrix/admin/public_file_edit.php?lang=ru&amp;path=%2Fpersonal%2Fsupport%2Findex.php&amp;site=s1&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&amp;templateID=future-group_new','width':'780','height':'470','min_width':'780','min_height':'400'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_edit"><span class="bx-panel-button-icon bx-panel-edit-secret-page-icon"></span></a><a id="bx_topmenu_btn_edit_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Изменить<span class="bx-panel-break"></span>страницу&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_edit', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Изменить страницу','TEXT':'Изменение содержимого страницы.'}, GROUP_ID : 1, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_edit_menu', TYPE: 'BIG', MENU: [{'TEXT':'В визуальном редакторе','TITLE':'Редактировать страницу в визуальном редакторе','ICON':'panel-edit-visual','ACTION':'(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit.php?lang=ru&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&templateID=future-group_new\',\'width\':\'780\',\'height\':\'470\',\'min_width\':\'780\',\'min_height\':\'400\'})).Show()','DEFAULT':true,'SORT':'10','HK_ID':'top_panel_edit_page'},{'TEXT':'Заголовок и свойства страницы','TITLE':'Изменить заголовок и другие свойства страницы','ICON':'panel-file-props','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_property.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','SORT':'20','HK_ID':'top_panel_page_prop'},{'SEPARATOR':true,'SORT':'29'},{'TEXT':'Доступ к странице','TITLE':'Установить права доступа к странице','ICON':'panel-file-access','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_access_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','SORT':'30','HK_ID':'top_panel_access_page_new'},{'ID':'delete','ICON':'icon-delete','ALT':'Удалить страницу','TEXT':'Удалить страницу','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_file_delete.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php\',\'width\':\'440\',\'height\':\'180\',\'min_width\':\'250\',\'min_height\':\'180\'})).Show()','SORT':'40','HK_ID':'top_panel_del_page'},{'SEPARATOR':true,'SORT':'49'},{'TEXT':'В режиме HTML-кода','TITLE':'Редактировать страницу в режиме HTML','ICON':'panel-edit-text','ACTION':'(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit.php?lang=ru&noeditor=Y&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'780\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()','SORT':'50','HK_ID':'top_panel_edit_page_html'},{'TEXT':'В режиме PHP-кода','TITLE':'Редактировать полный PHP-код страницы','ICON':'panel-edit-php','ACTION':'(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fpersonal%2Fsupport%2Findex.php&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&templateID=future-group_new\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()','SORT':'60','HK_ID':'top_panel_edit_page_php'},{'SEPARATOR':true,'SORT':'79'},{'SRC':'/bitrix/images/workflow/edit_flow_public.gif','TEXT':'Через документооборот','TITLE':'Редактирование текущей страницы через документооборот','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/workflow_edit.php?lang=ru&site=s1&fname=/personal/support/index.php&return_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')','HK_ID':'FLOW_PANEL_EDIT_WITH_WF','SORT':'80'},{'SRC':'/bitrix/images/workflow/history.gif','TEXT':'История изменений страницы','TITLE':'История изменений текущей страницы','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/workflow_history_list.php?lang=ru&find_filename=%2Fpersonal%2Fsupport%2Findex.php&find_filename_exact_match=Y&set_filter=Y\')','HK_ID':'FLOW_PANEL_HISTORY','SORT':'81'},{'SEPARATOR':true,'SORT':'99'},{'TEXT':'В панели управления','TITLE':'Редактировать текущую страницу','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/fileman_html_edit.php?lang=ru&site=s1&templateID=future-group_new&path=%2Fpersonal%2Fsupport%2Findex.php&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')','SORT':'100'}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Изменить страницу','TEXT':'Нажмите на эту кнопку, чтобы вызвать диалог редактирования страницы, в том числе через документооборот, просмотреть историю изменений страницы, изменить свойства страницы, ограничить доступ к ней.'}, GROUP_ID : 1, TEXT :  "Изменить страницу"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 96, '<b>Изменить раздел</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "javascript:(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_folder_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()", 69, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Свойства раздела', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_access_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()", 70, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Доступ к разделу', 0); </script><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="javascript:void(0)" onclick="(new BX.CDialog({'content_url':'/bitrix/admin/public_folder_edit.php?lang=ru&amp;site=s1&amp;path=%2Fpersonal%2Fsupport%2F&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes','width':'','height':'','min_width':'450','min_height':'250'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_edit_section"><span class="bx-panel-button-icon bx-panel-edit-secret-section-icon"></span></a><a id="bx_topmenu_btn_edit_section_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Изменить<span class="bx-panel-break"></span>раздел&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_edit_section', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Изменить раздел','TEXT':'Изменение свойств раздела.'}, GROUP_ID : 1, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_edit_section_menu', TYPE: 'BIG', MENU: [{'TEXT':'Свойства раздела','TITLE':'Изменить название и другие свойства раздела','ICON':'panel-folder-props','DEFAULT':true,'ACTION':'javascript:(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_folder_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','SORT':'10','HK_ID':'top_panel_folder_prop'},{'TEXT':'Доступ к разделу','TITLE':'Установить права доступа к разделу','ICON':'panel-folder-access','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_access_edit.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'\',\'height\':\'\',\'min_width\':\'450\',\'min_height\':\'250\'})).Show()','SORT':'30','HK_ID':'top_panel_access_folder_new'},{'SEPARATOR':true,'SORT':'99'},{'TEXT':'В панели управления','TITLE':'Редактировать свойства раздела','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/fileman_folder.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\')','SORT':'100'}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Изменить раздел','TEXT':'Нажмите на эту кнопку, чтобы изменить свойства раздела и ограничить доступ к нему.'}, GROUP_ID : 1, TEXT :  "Изменить раздел"})</script></span></span></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="2"><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" id="bx_topmenu_btn_menus"><span class="bx-panel-small-button-icon bx-panel-menu-icon"></span><span class="bx-panel-small-button-text">Меню</span><span class="bx-panel-small-single-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_menus', TYPE: 'SMALL', MENU: [{'TEXT':'Редактировать \"Главное меню\"','TITLE':'Редактировать пункты меню \"Главное меню\"','SORT':'100','ICON':'menu-edit','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_menu_edit.php?lang=ru&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&path=%2F&name=top\',\'width\':\'\',\'height\':\'\'})).Show()','DEFAULT':false},{'SEPARATOR':'Y','SORT':'150'},{'TEXT':'Создать \"Главное меню\"','TITLE':'Создать меню \"Главное меню\" в текущем разделе','SORT':'200','ICON':'menu-add','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_menu_edit.php?new=Y&lang=ru&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes&path=%2Fpersonal%2Fsupport&name=top\',\'width\':\'\',\'height\':\'\'})).Show()','DEFAULT':false}], ACTIVE_CSS: 'bx-panel-small-button-active', HOVER_CSS: 'bx-panel-small-button-hover', HINT: {'TITLE':'Меню','TEXT':'Вызов формы редактирования меню. Нажмите на стрелку, чтобы отредактировать все меню данной страницы или создать новое меню.','TARGET':'parent'}, GROUP_ID : 2, TEXT :  "Меню"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 97, '<b>Структура</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/fileman_admin.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F\')", 71, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В панели управления', 0); </script><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" onclick="(new BX.CDialog({'content_url':'/bitrix/admin/public_structure.php?lang=ru&amp;site=s1&amp;path=%2Fpersonal%2Fsupport%2Findex.php&amp;templateID=future-group_new','width':'350','height':'470'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-small-button-text-active')" id="bx_topmenu_btn_structure"><span class="bx-panel-small-button-icon bx-panel-site-structure-icon"></span><span class="bx-panel-small-button-text">Структура</span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_structure', TYPE: 'SMALL', ACTIVE_CSS: 'bx-panel-small-button-text-active', HOVER_CSS: 'bx-panel-small-button-text-hover', HINT: {'TITLE':'Структура','TEXT':'Вызов диалога Структура сайта с возможностью добавления, редактирования, перемещения, удаления, изменения свойств разделов и страниц.','TARGET':'parent'}, GROUP_ID : 2, SKIP : true, LINK: "javascript:void(0)", ACTION : "(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_structure.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&templateID=future-group_new\',\'width\':\'350\',\'height\':\'470\'})).Show()",TEXT :  "Структура" })</script><a href="javascript:void(0)" class="bx-panel-small-button-arrow" id="bx_topmenu_btn_structure_menu"><span class="bx-panel-small-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_structure_menu', TYPE: 'SMALL', MENU: [{'TEXT':'Управление структурой','TITLE':'Управление структурой сайта','ACTION':'(new BX.CDialog({\'content_url\':\'/bitrix/admin/public_structure.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&templateID=future-group_new\',\'width\':\'350\',\'height\':\'470\'})).Show()','DEFAULT':true,'HK_ID':'main_top_panel_struct'},{'SEPARATOR':true},{'TEXT':'В панели управления','TITLE':'Перейти в управление структурой в административном разделе','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/fileman_admin.php?lang=ru&site=s1&path=%2Fpersonal%2Fsupport%2F\')','HK_ID':'main_top_panel_struct_panel'}], ACTIVE_CSS: 'bx-panel-small-button-arrow-active', HOVER_CSS: 'bx-panel-small-button-arrow-hover', GROUP_ID : 2, TEXT :  "Структура"})</script></span></span><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" onclick="(new BX.CAdminDialog({'content_url':'/bitrix/admin/public_seo_tools.php?lang=ru&amp;bxpublic=Y&amp;from_module=seo&amp;site=s1&amp;path=%2Fpersonal%2Fsupport%2Findex.php&amp;title_final=0KHQv9C40YHQvtC6INC%2B0LHRgNCw0YnQtdC90LjQuQ%3D%3D&amp;title_changer_name=bitrix%3Asupport.ticket&amp;title_changer_link=&amp;title_win_final=&amp;title_win_changer_name=&amp;title_win_changer_link=&amp;sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes','width':'920','height':'400'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-small-button-active')" id="bx_topmenu_btn_seo"><span class="bx-panel-small-button-icon bx-panel-seo-icon"></span><span class="bx-panel-small-button-text">SEO</span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_seo', TYPE: 'SMALL', ACTIVE_CSS: 'bx-panel-small-button-active', HOVER_CSS: 'bx-panel-small-button-hover', HINT: {'TITLE':'SEO','TEXT':'Вызов инструментов оптимизации сайта с целью повышения положения сайта в выдаче поисковых машин.'}, GROUP_ID : 2, SKIP : false, LINK: "javascript:void(0)", ACTION : "(new BX.CAdminDialog({\'content_url\':\'/bitrix/admin/public_seo_tools.php?lang=ru&bxpublic=Y&from_module=seo&site=s1&path=%2Fpersonal%2Fsupport%2Findex.php&title_final=0KHQv9C40YHQvtC6INC%2B0LHRgNCw0YnQtdC90LjQuQ%3D%3D&title_changer_name=bitrix%3Asupport.ticket&title_changer_link=&title_win_final=&title_win_changer_name=&title_win_changer_link=&sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'920\',\'height\':\'400\'})).Show()",TEXT :  "SEO" })</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 98, '<b>Сбросить кеш</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "BX.clearCache()", 72, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Обновить кеш страницы', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/personal/support/?clear_cache_session=Y&login=yes\');", 74, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Не использовать кеш', 0); </script></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="3"><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="javascript:void(0)" onclick="BX.clearCache();BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_0"><span class="bx-panel-button-icon bx-panel-clear-cache-icon"></span></a><a id="bx_topmenu_btn_0_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Сбросить<span class="bx-panel-break"></span>кеш&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_0', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Сбросить кеш','TEXT':'Обновление кеша страницы.'}, GROUP_ID : 3, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_0_menu', TYPE: 'BIG', MENU: [{'TEXT':'Обновить кеш страницы','TITLE':'Обновить закешированные данные текущей страницы','ICON':'panel-page-cache','ACTION':'BX.clearCache()','DEFAULT':true,'HK_ID':'top_panel_cache_page'},{'SEPARATOR':true},{'TEXT':'Не использовать кеш','TITLE':'Отключить кеширование для текущего сеанса пользователя','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?clear_cache_session=Y&login=yes\');','HK_ID':'top_panel_cache_not'}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Сбросить кеш','TEXT':'Нажмите на эту кнопку, чтобы обновить кеш страницы или компонентов, или отключить кеш для данной страницы вообще.'}, GROUP_ID : 3, TEXT :  "Сбросить кеш"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], BX(\'bx-panel-toggle\').href);", 75, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Перейти в режим правки', 0); </script></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="4"><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" id="bx_topmenu_btn_components"><span class="bx-panel-small-button-icon bx-panel-components-icon"></span><span class="bx-panel-small-button-text">Компоненты</span><span class="bx-panel-small-single-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_components', TYPE: 'SMALL', MENU: [{'TEXT':'Перейти в режим правки','TITLE':'Перейдите в режим правки для отображения списка компонентов','ACTION':'jsUtils.Redirect([], BX(\'bx-panel-toggle\').href);','HK_ID':'top_panel_edit_mode'}], ACTIVE_CSS: 'bx-panel-small-button-active', HOVER_CSS: 'bx-panel-small-button-hover', HINT: {'TITLE':'Компоненты','TEXT':'Выбор компонента для редактирования его параметров.','TARGET':'parent'}, GROUP_ID : 4, TEXT :  "Компоненты"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 99, '<b>Шаблон сайта</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fbitrix%2Ftemplates%2Ffuture-group_new%2Fstyles.css&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()", 76, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изменить стили сайта', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fbitrix%2Ftemplates%2Ffuture-group_new%2Ftemplate_styles.css&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()", 77, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изменить стили шаблона', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/site_edit.php?lang=ru&LID=s1\')", 78, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Редактировать сайт', 0); </script><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" id="bx_topmenu_btn_1"><span class="bx-panel-small-button-icon bx-panel-site-template-icon"></span><span class="bx-panel-small-button-text">Шаблон сайта</span><span class="bx-panel-small-single-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_1', TYPE: 'SMALL', MENU: [{'TEXT':'Изменить стили сайта','TITLE':'Редактировать основные стили сайта (styles.css)','ICON':'panel-edit-text','HK_ID':'top_panel_templ_site_css','ACTION':'(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fbitrix%2Ftemplates%2Ffuture-group_new%2Fstyles.css&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()'},{'TEXT':'Изменить стили шаблона','TITLE':'Редактировать стили шаблона (template_styles.css)','ICON':'panel-edit-text','HK_ID':'top_panel_templ_templ_css','ACTION':'(new BX.CEditorDialog({\'content_url\':\'/bitrix/admin/public_file_edit_src.php?lang=ru&path=%2Fbitrix%2Ftemplates%2Ffuture-group_new%2Ftemplate_styles.css&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'470\',\'min_width\':\'700\',\'min_height\':\'400\'})).Show()'},{'SEPARATOR':'Y'},{'TEXT':'В панели управления','MENU':[{'TEXT':'Редактировать шаблон','TITLE':'Редактировать шаблон сайта в панели управления','ICON':'icon-edit','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/template_edit.php?lang=ru&ID=future-group_new\')','DEFAULT':false,'HK_ID':'top_panel_templ_edit'},{'TEXT':'Редактировать сайт','TITLE':'Редактировать настройки сайта в панели управления','ICON':'icon-edit','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/site_edit.php?lang=ru&LID=s1\')','DEFAULT':false,'HK_ID':'top_panel_templ_site'}]}], ACTIVE_CSS: 'bx-panel-small-button-active', HOVER_CSS: 'bx-panel-small-button-hover', HINT: {'TITLE':'Шаблон сайта','TEXT':'Вызов форм редактирования стилей сайта и стилей шаблона.','TARGET':'parent'}, GROUP_ID : 4, TEXT :  "Шаблон сайта"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 100, '<b>Отладка</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/personal/support/?show_sql_stat=Y&login=yes\');", 83, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Статистика SQL-запросов', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/personal/support/?show_include_exec_time=Y&login=yes\');", 82, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Статистика включаемых областей', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/personal/support/?show_page_exec_time=Y&login=yes\');", 81, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Время исполнения страницы', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/personal/support/?compress=Y&login=yes\');", 84, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Статистика компрессии', 0); </script><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="http://future-group.ru/personal/support/?show_page_exec_time=Y&amp;show_include_exec_time=Y&amp;show_sql_stat=Y&amp;login=yes" onclick=";BX.removeClass(this.parentNode.parentNode, 'bx-panel-small-button-text-active')" id="bx_topmenu_btn_2"><span class="bx-panel-small-button-icon bx-panel-performance-icon"></span><span class="bx-panel-small-button-text">Отладка</span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_2', TYPE: 'SMALL', ACTIVE_CSS: 'bx-panel-small-button-text-active', HOVER_CSS: 'bx-panel-small-button-text-hover', HINT: {'TITLE':'Отладка','TEXT':'Включение режима отображения суммарной статистики. Нажмите на стрелку, чтобы Просмотреть статистику запросов базы данных, статистику включаемых областей, время исполнение страницы и статистику компрессии.','TARGET':'parent'}, GROUP_ID : 4, SKIP : true, LINK: "/personal/support/?show_page_exec_time=Y&show_include_exec_time=Y&show_sql_stat=Y&login=yes", ACTION : "",TEXT :  "Отладка" })</script><a href="javascript:void(0)" class="bx-panel-small-button-arrow" id="bx_topmenu_btn_2_menu"><span class="bx-panel-small-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_2_menu', TYPE: 'SMALL', MENU: [{'TEXT':'Суммарная статистика','TITLE':'Показывать статистику SQL-запросов, включаемых областей, времени исполнения','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?show_page_exec_time=Y&show_include_exec_time=Y&show_sql_stat=Y&login=yes\');','DEFAULT':true,'HK_ID':'top_panel_debug_summ'},{'SEPARATOR':true},{'TEXT':'Статистика SQL-запросов','TITLE':'Показывать статистику SQL-запросов, исполняющихся на странице','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?show_sql_stat=Y&login=yes\');','HK_ID':'top_panel_debug_sql'},{'TEXT':'Детальная статистика кеша','TITLE':'Внимание! Может сильно влиять на время исполнения страницы.','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?show_cache_stat=Y&login=yes\');','HK_ID':'top_panel_debug_cache'},{'TEXT':'Статистика включаемых областей','TITLE':'Показывать статистику включаемых областей (время, запросы)','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?show_include_exec_time=Y&login=yes\');','HK_ID':'top_panel_debug_incl'},{'TEXT':'Время исполнения страницы','TITLE':'Показывать время исполнения страницы','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?show_page_exec_time=Y&login=yes\');','HK_ID':'top_panel_debug_time'},{'SEPARATOR':true},{'TEXT':'Статистика компрессии','TITLE':'Показывать статистику модуля компрессии','CHECKED':false,'ACTION':'jsUtils.Redirect([], \'/personal/support/?compress=Y&login=yes\');','HK_ID':'top_panel_debug_compr'}], ACTIVE_CSS: 'bx-panel-small-button-arrow-active', HOVER_CSS: 'bx-panel-small-button-arrow-hover', GROUP_ID : 4, TEXT :  "Отладка"})</script></span></span></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="5"><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" id="bx_topmenu_btn_3"><span class="bx-panel-small-button-icon bx-panel-statistics-icon"></span><span class="bx-panel-small-button-text">Статистика</span><span class="bx-panel-small-single-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_3', TYPE: 'SMALL', MENU: [{'TEXT':'График посещаемости страницы','TITLE':'График посещаемости страницы','IMAGE':'/bitrix/images/statistic/page_traffic.gif','ACTION':'javascript:window.open(\'/bitrix/admin/section_graph_list.php?lang=ru&public=Y&width=650&height=650&section=http%3A%2F%2Ffuture-group.ru%2Fpersonal%2Fsupport%2F&set_default=Y\',\'\',\'target=_blank,scrollbars=yes,resizable=yes,width=650,height=650,left=\'+Math.floor((screen.width - 650)/2)+\',top=\'+Math.floor((screen.height- 650)/2))'},{'TEXT':'Показать статистику переходов по ссылкам с данной страницы','TITLE':'Показать статистику переходов по ссылкам с данной страницы','IMAGE':'/bitrix/images/statistic/link_stat_show.gif','ACTION':'jsUtils.Redirect([], \'/personal/support/?show_link_stat=Y&login=yes\')'}], ACTIVE_CSS: 'bx-panel-small-button-active', HOVER_CSS: 'bx-panel-small-button-hover', HINT: {'TITLE':'Статистика','TEXT':'Просмотр графика посещаемости страницы или статистики переходов.','TARGET':'parent'}, GROUP_ID : 5, TEXT :  "Статистика"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 101, '<b>Короткий URL</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "javascript:(new BX.CAdminDialog({\'content_url\':\'/bitrix/admin/short_uri_edit.php?lang=ru&public=Y&bxpublic=Y&str_URI=%2Fpersonal%2Fsupport%2F&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'270\'})).Show()", 85, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Добавить короткую ссылку', 0); </script><script type="text/javascript"> BXHotKeys.Add("", "jsUtils.Redirect([], \'/bitrix/admin/short_uri_admin.php?lang=ru\');", 86, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Список ссылок', 0); </script><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" onclick="(new BX.CAdminDialog({'content_url':'/bitrix/admin/short_uri_edit.php?lang=ru&amp;public=Y&amp;bxpublic=Y&amp;str_URI=%2Fpersonal%2Fsupport%2F&amp;site=s1&amp;back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes','width':'770','height':'270'})).Show();BX.removeClass(this.parentNode.parentNode, 'bx-panel-small-button-text-active')" id="bx_topmenu_btn_4"><span class="bx-panel-small-button-icon bx-panel-short-url-icon"></span><span class="bx-panel-small-button-text">Короткий URL</span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_4', TYPE: 'SMALL', ACTIVE_CSS: 'bx-panel-small-button-text-active', HOVER_CSS: 'bx-panel-small-button-text-hover', HINT: {'TITLE':'Короткая ссылка','TEXT':'Настройка короткой ссылки для текущей страницы','TARGET':'parent'}, GROUP_ID : 5, SKIP : true, LINK: "javascript:void(0)", ACTION : "(new BX.CAdminDialog({\'content_url\':\'/bitrix/admin/short_uri_edit.php?lang=ru&public=Y&bxpublic=Y&str_URI=%2Fpersonal%2Fsupport%2F&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'270\'})).Show()",TEXT :  "Короткий URL" })</script><a href="javascript:void(0)" class="bx-panel-small-button-arrow" id="bx_topmenu_btn_4_menu"><span class="bx-panel-small-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_4_menu', TYPE: 'SMALL', MENU: [{'TEXT':'Добавить короткую ссылку','TITLE':'Добавить короткую ссылку на текущую страницу','ACTION':'javascript:(new BX.CAdminDialog({\'content_url\':\'/bitrix/admin/short_uri_edit.php?lang=ru&public=Y&bxpublic=Y&str_URI=%2Fpersonal%2Fsupport%2F&site=s1&back_url=%2Fpersonal%2Fsupport%2F%3Flogin%3Dyes\',\'width\':\'770\',\'height\':\'270\'})).Show()','DEFAULT':true,'HK_ID':'MTP_SHORT_URI1'},{'TEXT':'Список ссылок','TITLE':'Список коротких ссылок','ACTION':'jsUtils.Redirect([], \'/bitrix/admin/short_uri_admin.php?lang=ru\');','HK_ID':'MTP_SHORT_URI_LIST'}], ACTIVE_CSS: 'bx-panel-small-button-arrow-active', HOVER_CSS: 'bx-panel-small-button-arrow-hover', GROUP_ID : 5, TEXT :  "Короткий URL"})</script></span></span><script type="text/javascript"> BXHotKeys.Add("", "", 102, '<b>Стикеры</b>', 0); </script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Shift+83", "if (window.oBXSticker){window.oBXSticker.AddSticker();}", 87, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Наклеить стикер', 22); </script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Shift+88", "if (window.oBXSticker){window.oBXSticker.ShowAll();}", 88, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Показать стикеры <b>(0)</b>', 23); </script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Shift+76", "if (window.oBXSticker){window.oBXSticker.ShowList(\'current\');}", 89, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Список стикеров страницы', 24); </script><script type="text/javascript"> BXHotKeys.Add("", "if (window.oBXSticker){window.oBXSticker.ShowList(\'all\');}", 90, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Список всех стикеров', 0); </script><span class="bx-panel-break"></span><span class="bx-panel-small-button"><span class="bx-panel-small-button-inner"><a href="javascript:void(0)" onclick="if (window.oBXSticker){window.oBXSticker.AddSticker();};BX.removeClass(this.parentNode.parentNode, 'bx-panel-small-button-text-active')" id="bx_topmenu_btn_5"><span class="bx-panel-small-button-icon bx-panel-small-stickers-icon"></span><span class="bx-panel-small-button-text">Стикеры</span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_5', TYPE: 'SMALL', ACTIVE_CSS: 'bx-panel-small-button-text-active', HOVER_CSS: 'bx-panel-small-button-text-hover', HINT: {'TITLE':'Стикеры','TEXT':'Наклеить новый стикер на страницу.','TARGET':'parent'}, GROUP_ID : 5, SKIP : true, LINK: "javascript:void(0)", ACTION : "if (window.oBXSticker){window.oBXSticker.AddSticker();}",TEXT :  "Стикеры" })</script><a href="javascript:void(0)" class="bx-panel-small-button-arrow" id="bx_topmenu_btn_5_menu"><span class="bx-panel-small-button-arrow"></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_5_menu', TYPE: 'SMALL', MENU: [{'TEXT':'<div style=\"float: left; margin: 0 50px 0 0;\">Наклеить стикер<\/div>','TITLE':'Наклеить новый стикер на страницу ( Ctrl+Shift+S ) ','ICON':'','ACTION':'if (window.oBXSticker){window.oBXSticker.AddSticker();}','DEFAULT':true,'HK_ID':'FMST_PANEL_STICKER_ADD'},{'SEPARATOR':true},{'ID':'bxst-show-sticker-icon','TEXT':'<div style=\"float: left; margin: 0 50px 0 0;\">Показать стикеры <b>(0)<\/b><\/div>','TITLE':'Отобразить все стикеры на странице ( Ctrl+Shift+X ) ','ICON':'','ACTION':'if (window.oBXSticker){window.oBXSticker.ShowAll();}','HK_ID':'FMST_PANEL_STICKERS_SHOW'},{'TEXT':'<div style=\"float: left; margin: 0 50px 0 0;\">Список стикеров страницы<\/div>','TITLE':'Показать список всех стикеров на текущей странице ( Ctrl+Shift+L ) ','ICON':'','ACTION':'if (window.oBXSticker){window.oBXSticker.ShowList(\'current\');}','HK_ID':'FMST_PANEL_CUR_STICKER_LIST'},{'TEXT':'Список всех стикеров','TITLE':'Показать список всех стикеров на сайте','ICON':'','ACTION':'if (window.oBXSticker){window.oBXSticker.ShowList(\'all\');}','HK_ID':'FMST_PANEL_ALL_STICKER_LIST'}], ACTIVE_CSS: 'bx-panel-small-button-arrow-active', HOVER_CSS: 'bx-panel-small-button-arrow-hover', GROUP_ID : 5, TEXT :  "Стикеры"})</script></span></span></span><span class="bx-panel-button-separator"></span><span class="bx-panel-button-group" data-group-id="6"><span class="bx-panel-button"><span class="bx-panel-button-inner"><a href="http://future-group.ru/?add_new_site_sol=sol&amp;sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e" onclick=";BX.removeClass(this.parentNode.parentNode, 'bx-panel-button-icon-active');" id="bx_topmenu_btn_solutions_wizard"><span class="bx-panel-button-icon bx-panel-install-solution-icon"></span></a><a id="bx_topmenu_btn_solutions_wizard_menu" href="javascript:void(0)"><span class="bx-panel-button-text">Протестировать<span class="bx-panel-break"></span>новое решение&nbsp;<span class="bx-panel-button-arrow"></span></span></a><script type="text/javascript">BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_solutions_wizard', TYPE: 'BIG', ACTIVE_CSS: 'bx-panel-button-icon-active', HOVER_CSS: 'bx-panel-button-icon-hover', HINT: {'TITLE':'Протестировать новое решение','TEXT':'Выбор нового решения для установки.'}, GROUP_ID : 6, SKIP : true }); BX.admin.panel.RegisterButton({ID: 'bx_topmenu_btn_solutions_wizard_menu', TYPE: 'BIG', MENU: [{'ACTION':'jsUtils.Redirect([], \'/?add_new_site_sol=sol&sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e\')','TEXT':'<b>Протестировать новое решение<\/b>','TITLE':'Создать новый сайт и запустить мастер установки нового решения'},{'ACTION':'if(confirm(\'Внимание! После удаления кнопки вы сможете запустить мастер создания нового решения в панели управления, используя страницу с мастерами или формой добавления нового сайта. Удалить кнопку с панели?\')) jsUtils.Redirect([], \'/?delete_button_sol=sol&sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e\');','TEXT':'Удалить эту кнопку','TITLE':'Удалить эту кнопку с панели'},{'SEPARATOR':true},{'TEXT':'Перейти на сайт','MENU':[{'ACTION':'jsUtils.Redirect([], \'/\');','ICON':'checked','TEXT':'Future','TITLE':'Перейти на сайт Future'}]}], ACTIVE_CSS: 'bx-panel-button-text-active', HOVER_CSS: 'bx-panel-button-text-hover', HINT: {'TITLE':'Протестировать новое решение','TEXT':'Нажмите на эту кнопку, чтобы выбрать новое решение для установки, удаление этой кнопки с Панели управления или для перехода на другой сайт.'}, GROUP_ID : 6, TEXT :  "Протестировать новое решение"})</script></span></span></span></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		BX.admin.panel.state = {
+			fixed: false,
+			collapsed: true
+		};
+		BX.admin.moreButton.init({ buttonTitle : "Еще"});
+		</script><script type="text/javascript"> BXHotKeys.Add("Ctrl+Alt+75", "location.href=\'/bitrix/admin/hot_keys_list.php?lang=ru\';", 106, 'Перейти в раздел управления горячими клавишами', 18);  BXHotKeys.Add("Ctrl+Alt+80", "BXHotKeys.ShowSettings();", 17, 'Список горячих клавиш на странице', 14);  BXHotKeys.Add("Ctrl+Alt+85", "location.href=\'/bitrix/admin/user_admin.php?lang=\'+phpVars.LANGUAGE_ID;", 139, 'Перейти в раздел управления пользователями', 13); </script><script type="text/javascript">
+			BXHotKeys.MesNotAssign = 'не назначена';
+			BXHotKeys.MesClToChange = 'Кликните мышкой, чтобы изменить';
+			BXHotKeys.MesClean = 'Очистить';
+			BXHotKeys.MesBusy = 'Данная комбинация клавиш уже задействована. Вы уверены, что хотите её использовать повторно?';
+			BXHotKeys.MesClose = 'Закрыть';
+			BXHotKeys.MesSave = 'Сохранить';
+			BXHotKeys.MesSettings = 'Настройка горячих клавиш';
+			BXHotKeys.MesDefault = 'По умолчанию';
+			BXHotKeys.MesDelAll = 'Удалить все';
+			BXHotKeys.MesDelConfirm = 'Вы уверены, что хотите удалить все назначенные сочетания горячих клавиш?';
+			BXHotKeys.MesDefaultConfirm = 'Вы уверены, что хотите удалить все назначенные сочетания горячих клавиш и установить сочетания горячих клавиш по умолчанию?';
+			BXHotKeys.MesExport = 'Экспорт';
+			BXHotKeys.MesImport = 'Импорт';
+			BXHotKeys.MesExpFalse = 'Экспортировать горячие клавиши не удалось.';
+			BXHotKeys.MesImpFalse = 'Импортировать горячие клавиши не удалось.';
+			BXHotKeys.MesImpSuc = 'Успешно импортировано горячих клавиш: ';
+			BXHotKeys.MesImpHeader = 'Импорт горячих клавиш';
+			BXHotKeys.MesFileEmpty = 'Для импорта горячих клавиш необходимо указать файл.';
+			BXHotKeys.MesDelete = 'Удалить';
+			BXHotKeys.MesChooseFile = 'Выбрать файл';
+			BXHotKeys.uid = 1;
+			</script><script type="text/javascript">BX.ready(function(){var BXST_MESS =
+{
+	Public : "общий",
+	Personal : "личный",
+	Close : "Отклеить",
+	Collapse : "Свернуть",
+	UnCollapse : "Восстановить",
+	UnCollapseTitle : "Двойной клик для восстановления стикера",
+	SetMarkerArea : "Привязать к области на странице",
+	SetMarkerEl : "Привязать к элементу на странице",
+	Color : "цвет",
+	Add : "добавить",
+	PersonalTitle : "Только вы можете видеть этот стикер. Нажмите, чтобы изменить.",
+	PublicTitle : "Этот стикер могут видеть другие. Нажмите, чтобы изменить.",
+	CursorHint : "Выделите область",
+	Yellow : "Желтый",
+	Green : "Зеленый",
+	Blue : "Синий",
+	Red : "Красный",
+	Purple : "Пурпурный",
+	Gray : "Серый",
+	StickerListTitle : "Список стикеров",
+	CompleteLabel : "выполнено",
+	DelConfirm : "Вы уверены, что хотите удалить выбранные стикеры?",
+	CloseConfirm : "Этот стикер наклеил #USER_NAME# Вы уверенны, что хотите его отклеить?",
+	Complete : "Пометить как завершенное",
+	CloseNotify : "Вы можете вернуть отклеенные стикеры на экран из #LINK#списка стикеров#LINK#."
+}; window.oBXSticker = new BXSticker({'access':'W','sessid_get':'sessid=30ae1f3da3ab7ca7e257bf508fa5ac7e','start_width':'350','start_height':'200','min_width':'280','min_height':'160','start_color':'0','zIndex':'5000','curUserName':'Future','curUserId':'1','pageUrl':'/personal/support/','pageTitle':'Список обращений','bShowStickers':false,'listWidth':'800','listHeight':'450','listNaviSize':'5','useHotkeys':false,'filterParams':{'type':'all','colors':'all','status':'opened','page':'all'},'bHideBottom':true,'focusOnSticker':'0','strDate':'17 Ноября','curPageCount':'0','site_id':'s1'}, [], BXST_MESS);});</script>
+
+
+<script type="text/javascript">
+	BX.ready( function(){BX.adminInformer.Init(3); } );
+</script></div>
+<section id="login">
+
+    <div class="row">
+        <div class="large-6 large-offset-3  medium-8 medium-offset-2 columns">
+            <form class="normal" method="post" action="/personal/support/?login=yes">
+                <input value="Y" name="AUTH_FORM" type="hidden">
+                <input value="AUTH" name="TYPE" type="hidden">
+
+                <div class="row">
+                    <div class="columns meduum-12">
+                        <div class="caption">Вход для клиентов <div class="close" id="loginFormHide"></div></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns medium-12">
+                        <div class="name-field">
+                            <label>
+                                Ваш логин <input name="USER_LOGIN" type="text">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns medium-12">
+                        <div class="name-field">
+                            <label>
+                                Ваш пароль <input name="USER_PASSWORD" value="" type="password">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-12 medium-6">
+                        <span class="customCheckbox"></span><input id="checkbox-save" name="USER_REMEMBER" value="Y" type="checkbox"><label for="checkbox-save">Запомнить</label>
+                    </div>
+                    <div class="columns small-12 medium-6">
+                        <button type="submit" class="right">Отправить</button>
+                                            </div>
+                    <div class="columns medium-12 ">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>    <nav style="" class="tab-bar show-for-small" data-topbar="">
+        <a class="left-off-canvas-toggle menu-icon">
+            <span>Меню</span>
+        </a>
+
+        
+
+    <section class="right tab-bar-section text-right">
+            <div id="phone-top-small">Т: +7 499 340-94-71</div>
+            <div id="email-top-small">E: <a href="mailto:info@future-group.ru">info@future-group.ru</a></div>
+        </section></nav>
+
+    <aside class="left-off-canvas-menu">
+            <ul class="off-canvas-list">
+        <li><label>Future - internet agency</label></li>
+                    
+            <li><a href="http://future-group.ru/company/">Компания</a></li>
+                            <li style="display:none;">
+                <ul>
+                                
+                    
+            <li><a href="http://future-group.ru/company/#sub1">Основные направления</a></li>
+                                
+                    
+            <li><a href="http://future-group.ru/company/#sub2">Команда Future</a></li>
+                                
+                    
+            <li><a href="http://future-group.ru/company/vacancy/">Вакансии</a></li>
+                                        </ul>
+                </li>
+                    
+                    
+            <li><a href="http://future-group.ru/uslugi/">Услуги</a></li>
+                                
+                    
+            <li><a href="http://future-group.ru/portfolio/">Работы</a></li>
+                                
+                    
+            <li><a href="http://future-group.ru/contact/">Контакты</a></li>
+                                
+                                <li><a href="http://future-group.ru/personal/support/" class="active">Личный кабинет</a></li>
+        
+        
+    </ul>
+
+        <div class="sub-adress">
+            115088 Москва, ул. 2-я Машиностроения, д. 7 стр. 1<br>
+            +7 499 340-94-71
+        </div>
+
+    </aside>
+    <section class="main-section">
+
+    <div class="semi5-grey-row">
+        <div class="row">
+            <div class="large-3 medium-3 column medium-push-9  small-text-center medium-text-right">
+                <div class="logo-container">
+                                            <a href="http://future-group.ru/"><img src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/logo2x.png" alt="Future Internet Agency" width="140"></a>
+                                        <noscript><img src="/bitrix/templates/future-group_new/images/icons/logo.png" width="163"
+                                   alt="Future Internet Agency"/></noscript>
+                                    </div>
+            </div>
+            <div class="large-9 medium-9 small-12 medium-pull-3 medium-text-left column small-text-center">
+                <div id="contacs" class="hide-for-small">
+                    <span id="phone">Телефон: +7 499 340-94-71</span>
+                    <span id="email">Email: <a href="mailto:info@future-group.ru">info@future-group.ru</a></span>
+                </div>
+                <div id="menu" class="hide-for-small">
+                    
+    <ul>
+
+                                                        <li level="2">
+                <a href="http://future-group.ru/company/" class="">Компания</a>
+                
+                    <ul style="display:none;">
+                                                                                                    <li level="2">
+                <a href="http://future-group.ru/company/#sub1" class="scrlto">Основные направления</a>
+                                       </li>
+                                                                                        <li level="2">
+                <a href="http://future-group.ru/company/#sub2" class="scrlto">Команда Future</a>
+                                       </li>
+                                                                                        <li level="1">
+                <a href="http://future-group.ru/company/vacancy/" class="scrlto">Вакансии</a>
+                                       </li>
+                                                                    </ul></li>                                                <li level="1">
+                <a href="http://future-group.ru/uslugi/" class="scrlto">Услуги</a>
+                                       </li>
+                                                                                        <li level="1">
+                <a href="http://future-group.ru/portfolio/" class="scrlto">Работы</a>
+                                       </li>
+                                                                                        <li level="1">
+                <a href="http://future-group.ru/contact/" class="scrlto">Контакты</a>
+                                       </li>
+                                                                                        <li level="1">
+                <a href="http://future-group.ru/personal/support/" class="active scrlto">Личный кабинет</a>
+                                        </li>
+                                                
+    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="custom-breadcrumbs">
+	<div class="row">
+		<div class="columns sub-text large-12"><a href="http://future-group.ru/" title="Главная">Главная</a> <span>/</span> <a href="http://future-group.ru/personal/" title="Личный кабинет">Личный кабинет</a> <span>/</span> <span>Техподдержка</span></div></div></div><br>
+<div class="row">
+    <div class="columns">
+        <h1>Список обращений</h1>
+    </div>
+    <div style="clear:both;"></div>
+    
+    <div class="columns">
+    <div class="b-filter-button-block">
+        <form method="post" class="left" action="/personal/support/0/">
+            <input class="button" name="edit" value="Создать обращение" type="submit">
+        </form>
+        <div class="b-filter-button-block-right">
+            <div class="b-filter-button-block-right__toggle"><span>Найти старое обращение</span></div>
+
+            <div style="height: 0px;" class="b-filter-button-block-right__search"><form name="filter_ticket_grid" action="" method="GET"><div style="display: block;" class="bx-interface-filter">
+<form name="filter_ticket_grid" action="" method="GET">
+<input name="login" value="yes" type="hidden">
+
+
+</form>
+</div></form><form name="filter_ticket_grid" action="" method="GET"><table style="display: table;" class="bx-interface-filter" cellspacing="0">
+	<tbody><tr class="bx-filter-header" id="flt_header_ticket_grid" oncontextmenu="return bxGrid_ticket_grid.filterMenu">
+		<td>
+			
+			
+			
+			
+			
+			
+			<a href="javascript:void(0)" onclick="bxGrid_ticket_grid.menu.ShowMenu(this, bxGrid_ticket_grid.filterMenu);" class="bx-filter-btn bx-filter-menu" title="Дополнительные условия поиска"></a><div class="bx-filter-text">Поиск</div>
+			<div class="empty" style="width:50px; float:left;"></div>
+			
+		</td>
+	</tr>
+	<tr class="bx-filter-content" id="flt_content_ticket_grid">
+		<td>
+			<table class="bx-filter-rows" cellspacing="0">
+				<tbody><tr id="flt_row_ticket_grid_ID">
+					<td>ID обращения:</td>
+					<td>
+<input name="ID" size="30" type="text">
+					</td>
+					
+				</tr>
+				<tr id="flt_row_ticket_grid_LAMP" valign="top">
+					<td>Индикатор:</td>
+					<td>
+<select name="LAMP[]" size="4" multiple="multiple">
+	<option value="" selected="selected">(нет)</option>
+	<option value="red">красный</option>
+	<option value="green">зеленый</option>
+	<option value="grey">серый</option>
+</select>
+					</td>
+					
+				</tr>
+				<tr id="flt_row_ticket_grid_CLOSE">
+					<td>Закрыто/открыто:</td>
+					<td>
+<select name="CLOSE">
+	<option value="" selected="selected">(все)</option>
+	<option value="Y">закрыто</option>
+	<option value="N">открыто</option>
+</select>
+					</td>
+					
+				</tr>
+				<tr id="flt_row_ticket_grid_MESSAGE" style="display:none">
+					<td>Заголовок / Текст сообщения:</td>
+					<td>
+<input name="MESSAGE" size="30" type="text">
+					</td>
+					
+				</tr>
+			</tbody></table>
+			<div class="bx-filter-buttons">
+				<input style="margin-bottom: 5px; margin-right: 5px;" class="button right" name="filter" value="Найти" title="Найти записи по условиям поиска" type="submit">
+				
+				<input name="clear_filter" value="" type="hidden">
+			</div>
+		</td>
+	</tr>
+</tbody></table></form></div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+<form name="form_ticket_grid" action="/personal/support/?login=yes" method="POST">
+
+<input name="sessid" id="sessid" value="30ae1f3da3ab7ca7e257bf508fa5ac7e" type="hidden"><table class="bx-interface-grid bx-interface-grid-theme-grey" id="ticket_grid" cellspacing="0">
+	<tbody><tr class="bx-grid-gutter" oncontextmenu="return bxGrid_ticket_grid.settingsMenu">
+		
+		<td><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class="link-table"><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class=" bx-right"><div class="empty"></div></td>
+	</tr>
+	<tr class="bx-grid-head" oncontextmenu="return bxGrid_ticket_grid.settingsMenu" ondblclick="bxGrid_ticket_grid.EditCurrentView()">
+		
+		<td class="bx-sortable" onclick="bxGrid_ticket_grid.Sort('/personal/support/?login=yes&amp;by=s_lamp&amp;order=', '', 'asc', arguments);" oncontextmenu="return [{'TEXT': 'Сортировать по возрастанию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_lamp&amp;order=\', \'desc\')', 'ICONCLASS':'grid-sort-asc'}, {'TEXT': 'Сортировать по убыванию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_lamp&amp;order=\', \'asc\')', 'ICONCLASS':'grid-sort-desc'}, {'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'LAMP\')', 'DISABLED':false}]" title="Сортировка: Инд.">
+			<table class="bx-grid-sorting" cellspacing="0">
+				<tbody><tr>
+					<td>Инд.</td>
+					<td class="bx-sort-sign"><div class="empty"></div></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td class="bx-sortable" onclick="bxGrid_ticket_grid.Sort('/personal/support/?login=yes&amp;by=s_id&amp;order=', '', 'asc', arguments);" oncontextmenu="return [{'TEXT': 'Сортировать по возрастанию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_id&amp;order=\', \'desc\')', 'ICONCLASS':'grid-sort-asc'}, {'TEXT': 'Сортировать по убыванию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_id&amp;order=\', \'asc\')', 'ICONCLASS':'grid-sort-desc'}, {'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'ID\')', 'DISABLED':false}]" title="Сортировка: ID">
+			<table class="bx-grid-sorting" cellspacing="0">
+				<tbody><tr>
+					<td>ID</td>
+					<td class="bx-sort-sign"><div class="empty"></div></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td onclick="bxGrid_ticket_grid.EditCurrentView()" class="link-table" oncontextmenu="return [{'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'TITLE\')', 'DISABLED':false}]">
+			Заголовок		</td>
+		<td class="bx-sortable" onclick="bxGrid_ticket_grid.Sort('/personal/support/?login=yes&amp;by=s_timestamp_x&amp;order=', '', 'asc', arguments);" oncontextmenu="return [{'TEXT': 'Сортировать по возрастанию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_timestamp_x&amp;order=\', \'desc\')', 'ICONCLASS':'grid-sort-asc'}, {'TEXT': 'Сортировать по убыванию', 'ONCLICK':'bxGrid_ticket_grid.Sort(\'/personal/support/?login=yes&amp;by=s_timestamp_x&amp;order=\', \'asc\')', 'ICONCLASS':'grid-sort-desc'}, {'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'TIMESTAMP_X\')', 'DISABLED':false}]" title="Сортировка: Изменено">
+			<table class="bx-grid-sorting" cellspacing="0">
+				<tbody><tr>
+					<td>Изменено</td>
+					<td class="bx-sort-sign"><div class="empty"></div></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td oncontextmenu="return [{'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'MODIFIED_BY\')', 'DISABLED':false}]">
+			Кто изменил		</td>
+		<td oncontextmenu="return [{'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'MESSAGES\')', 'DISABLED':false}]">
+			Сооб.		</td>
+		<td class=" bx-right" oncontextmenu="return [{'TEXT': 'Скрыть колонку', 'ONCLICK':'bxGrid_ticket_grid.HideColumn(\'STATUS_NAME\')', 'DISABLED':false}]">
+			Статус		</td>
+	</tr>
+
+	<tr class=" bx-odd bx-top" oncontextmenu="return bxGrid_ticket_grid.oActions[0]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/90/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/90/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-yellow" title="последний раз в обращение писал клиент техподдержки (вы не ответственный)"></div></td>
+		<td>90</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/90/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/90/');" class="link-table">Банеры</td>
+		<td>14.11.2014 13:21:57</td>
+		<td>[11] Вячеслав Дерипаско [10569]</td>
+		<td>1</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[1]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/87/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/87/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-yellow" title="последний раз в обращение писал клиент техподдержки (вы не ответственный)"></div></td>
+		<td>87</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/87/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/87/');" class="link-table">Создание кабинета</td>
+		<td>14.11.2014 12:00:02</td>
+		<td>[7] Тимур Курбатов [10504]</td>
+		<td>7</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[2]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/88/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/88/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>88</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/88/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/88/');" class="link-table">Ошибка на сайте</td>
+		<td>17.11.2014 16:22:36</td>
+		<td>[1] Future [9887]</td>
+		<td>4</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[3]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/74/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/74/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>74</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/74/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/74/');" class="link-table">Описания материалов в карточке товаров - не все работают</td>
+		<td>17.11.2014 12:01:27</td>
+		<td>[1] Future [9887]</td>
+		<td>5</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[4]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/70/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/70/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>70</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/70/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/70/');" class="link-table">Смена лого и адреса на сайте</td>
+		<td>17.11.2014 11:57:44</td>
+		<td>[1] Future [9887]</td>
+		<td>6</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[5]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/91/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/91/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>91</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/91/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/91/');" class="link-table">Афиша</td>
+		<td>15.11.2014 13:02:08</td>
+		<td>[11] Вячеслав Дерипаско [10569]</td>
+		<td>2</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[6]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/89/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/89/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>89</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/89/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/89/');" class="link-table">СРОЧНО! Не оформляются заказы!</td>
+		<td>14.11.2014 17:20:16</td>
+		<td>[1] Future [9887]</td>
+		<td>1</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[7]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/61/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/61/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>61</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/61/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/61/');" class="link-table">Изменение в разделе каталоги</td>
+		<td>14.11.2014 12:05:53</td>
+		<td>[1] Future [9887]</td>
+		<td>4</td>
+		<td class=" bx-right">Принято к рассмотрению</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[8]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/78/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/78/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>78</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/78/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/78/');" class="link-table">Нужно загрузить файл на сайт</td>
+		<td>16.11.2014 16:51:24</td>
+		<td>auto closing</td>
+		<td>5</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[9]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/63/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/63/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>63</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/63/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/63/');" class="link-table">Клиенты не могут оформить заказ</td>
+		<td>14.11.2014 11:26:53</td>
+		<td>[1] Future [9887]</td>
+		<td>7</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[10]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/86/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/86/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>86</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/86/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/86/');" class="link-table">Логотип</td>
+		<td>15.11.2014 16:49:55</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[11]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/83/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/83/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>83</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/83/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/83/');" class="link-table">На смартфоне отсутствует "Подарок" в корзине</td>
+		<td>15.11.2014 16:49:55</td>
+		<td>auto closing</td>
+		<td>5</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[12]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/85/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/85/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>85</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/85/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/85/');" class="link-table">test</td>
+		<td>15.11.2014 16:49:55</td>
+		<td>auto closing</td>
+		<td>5</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[13]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/81/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/81/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>81</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/81/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/81/');" class="link-table">Баннеры</td>
+		<td>14.11.2014 16:47:59</td>
+		<td>auto closing</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[14]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/84/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/84/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>84</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/84/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/84/');" class="link-table">спам</td>
+		<td>14.11.2014 16:47:59</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[15]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/57/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/57/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>57</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/57/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/57/');" class="link-table">Организации</td>
+		<td>11.11.2014 13:07:19</td>
+		<td>[1] Future [9887]</td>
+		<td>4</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[16]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/76/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/76/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>76</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/76/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/76/');" class="link-table">На смартфоне в Корзине отсутствует поле Купон</td>
+		<td>11.11.2014 12:48:12</td>
+		<td>[12] Павел Кулинич [9637]</td>
+		<td>4</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[17]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/80/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/80/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>80</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/80/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/80/');" class="link-table">Создать правило работы с корзиной - скидки для оптовиков</td>
+		<td>11.11.2014 12:16:05</td>
+		<td>[1] Future [9887]</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[18]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/54/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/54/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>54</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/54/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/54/');" class="link-table">Организации</td>
+		<td>14.11.2014 13:26:52</td>
+		<td>[11] Вячеслав Дерипаско [10569]</td>
+		<td>4</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[19]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/75/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/75/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>75</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/75/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/75/');" class="link-table">При печати оптового заказа отсутствуют артикулы</td>
+		<td>10.11.2014 19:12:12</td>
+		<td>[12] Павел Кулинич [9637]</td>
+		<td>6</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[20]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/79/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/79/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-green" title="последний раз в обращение писали вы"></div></td>
+		<td>79</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/79/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/79/');" class="link-table">Не работает счетчик обратного отсчета</td>
+		<td>13.11.2014 09:33:43</td>
+		<td>[1] Future [9887]</td>
+		<td>6</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[21]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/65/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/65/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>65</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/65/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/65/');" class="link-table">Кол-во рекомендованных товаров в карточке товара</td>
+		<td>10.11.2014 18:40:24</td>
+		<td>[12] Павел Кулинич [9637]</td>
+		<td>8</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[22]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/77/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/77/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>77</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/77/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/77/');" class="link-table">Статистика</td>
+		<td>10.11.2014 16:10:19</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[23]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/51/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/51/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>51</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/51/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/51/');" class="link-table">Проблема с кешированием скидок</td>
+		<td>10.11.2014 16:10:19</td>
+		<td>auto closing</td>
+		<td>10</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[24]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/69/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/69/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>69</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/69/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/69/');" class="link-table">Меню с подразделами на планшете и смартфоне</td>
+		<td>07.11.2014 14:06:06</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[25]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/67/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/67/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>67</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/67/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/67/');" class="link-table">Новый пункт "Подарок" при Печати заказа</td>
+		<td>06.11.2014 17:48:44</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[26]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/72/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/72/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>72</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/72/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/72/');" class="link-table">Добавить способы оплаты при оформлении заказа</td>
+		<td>10.11.2014 16:10:19</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[27]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/64/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/64/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>64</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/64/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/64/');" class="link-table">Изменить дизайн баннера</td>
+		<td>06.11.2014 16:09:35</td>
+		<td>[1] Future [9887]</td>
+		<td>5</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[28]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/71/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/71/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>71</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/71/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/71/');" class="link-table">ссылка с лого с utm-метками</td>
+		<td>06.11.2014 11:22:48</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[29]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/68/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/68/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>68</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/68/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/68/');" class="link-table">Вкладка "Серебро" на планшете</td>
+		<td>06.11.2014 16:29:57</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[30]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/73/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/73/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>73</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/73/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/73/');" class="link-table">Не работает фильтр по цвету в каталоге</td>
+		<td>06.11.2014 11:19:52</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[31]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/66/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/66/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>66</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/66/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/66/');" class="link-table">Отображение видео в карточке товара</td>
+		<td>05.11.2014 16:15:20</td>
+		<td>[1] Future [9887]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[32]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/49/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/49/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>49</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/49/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/49/');" class="link-table">Создание возможности страницы на сайте без вывода в портфолио</td>
+		<td>02.11.2014 19:45:23</td>
+		<td>[13] Артем Бобров</td>
+		<td>5</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[33]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/48/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/48/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>48</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/48/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/48/');" class="link-table">продвижение отдельных фраз</td>
+		<td>30.10.2014 14:09:03</td>
+		<td>[1] Future [9887]</td>
+		<td>8</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[34]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/62/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/62/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>62</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/62/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/62/');" class="link-table">Добавить в раздел Лидеры</td>
+		<td>31.10.2014 15:59:46</td>
+		<td>auto closing</td>
+		<td>3</td>
+		<td class=" bx-right">&nbsp;</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[35]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/60/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/60/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>60</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/60/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/60/');" class="link-table">Поменять ссылку в кнопке на странице /nano4g </td>
+		<td>28.10.2014 15:59:18</td>
+		<td>auto closing</td>
+		<td>4</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[36]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/11/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/11/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>11</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/11/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/11/');" class="link-table">Тетсовое обращение</td>
+		<td>31.10.2014 15:59:46</td>
+		<td>auto closing</td>
+		<td>9</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[37]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/58/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/58/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>58</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/58/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/58/');" class="link-table">Организации</td>
+		<td>27.10.2014 15:59:12</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[38]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/55/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/55/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>55</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/55/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/55/');" class="link-table">Статистика</td>
+		<td>27.10.2014 15:59:12</td>
+		<td>auto closing</td>
+		<td>4</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[39]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/38/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/38/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>38</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/38/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/38/');" class="link-table">тестовое сообщение от другого пользователя</td>
+		<td>22.10.2014 19:22:02</td>
+		<td>[1] Future [9887]</td>
+		<td>6</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[40]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/59/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/59/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>59</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/59/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/59/');" class="link-table">Не работает форма заявки</td>
+		<td>23.10.2014 13:26:33</td>
+		<td>[1] Future [9887]</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[41]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/47/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/47/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>47</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/47/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/47/');" class="link-table">баннер</td>
+		<td>21.10.2014 15:51:45</td>
+		<td>auto closing</td>
+		<td>11</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[42]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/53/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/53/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>53</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/53/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/53/');" class="link-table">Выполнить настройку интеграции</td>
+		<td>19.10.2014 15:51:12</td>
+		<td>auto closing</td>
+		<td>25</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[43]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/56/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/56/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>56</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/56/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/56/');" class="link-table">Изменить ссылку на странице nano</td>
+		<td>19.10.2014 15:51:12</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[44]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/44/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/44/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>44</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/44/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/44/');" class="link-table">Организации</td>
+		<td>14.11.2014 13:29:02</td>
+		<td>[11] Вячеслав Дерипаско [10569]</td>
+		<td>4</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[45]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/46/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/46/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>46</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/46/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/46/');" class="link-table">спам</td>
+		<td>10.11.2014 19:21:27</td>
+		<td>[1] Future [9887]</td>
+		<td>11</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[46]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/50/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/50/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>50</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/50/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/50/');" class="link-table">Ошибка в шаблоне</td>
+		<td>13.10.2014 11:58:26</td>
+		<td>[15] Андрей Салько</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even" oncontextmenu="return bxGrid_ticket_grid.oActions[47]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/52/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/52/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>52</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/52/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/52/');" class="link-table">Не работает кнопка "Все товары на одной странице"</td>
+		<td>16.10.2014 15:47:34</td>
+		<td>auto closing</td>
+		<td>2</td>
+		<td class=" bx-right">В стадии решения</td>
+	</tr>
+	<tr class=" bx-odd" oncontextmenu="return bxGrid_ticket_grid.oActions[48]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/45/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/45/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>45</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/45/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/45/');" class="link-table">Сделать корпоративную почту</td>
+		<td>10.10.2014 15:07:53</td>
+		<td>[1] Future [9887]</td>
+		<td>9</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+	<tr class=" bx-even bx-bottom" oncontextmenu="return bxGrid_ticket_grid.oActions[49]" ondblclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/43/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/43/');" title="Двойной щелчок - Изменить">
+			
+			<td><div class="support-lamp-grey" title="обращение закрыто"></div></td>
+		<td>43</td>
+		<td onclick="BX.ajax.AJAX_ID = ''; var url = '/personal/support/43/'; if(BX.ajax.AJAX_ID != '') BX.ajax.insertToNode(url+(url.indexOf('?') == -1? '?':'&amp;')+'bxajaxid='+BX.ajax.AJAX_ID, 'comp_'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, '/personal/support/43/');" class="link-table">Организации</td>
+		<td>21.10.2014 09:19:14</td>
+		<td>[11] Вячеслав Дерипаско [10569]</td>
+		<td>3</td>
+		<td class=" bx-right">Успешно решено</td>
+	</tr>
+
+	
+</tbody></table><div class="custom-table-footer"><div class="table-pagination">
+	<span class="modern-page-title">Страницы:</span>
+		<span class="modern-page-first modern-page-current">1</span>
+		<a href="http://future-group.ru/personal/support/?login=yes&amp;PAGEN_1=2" class="">2</a>
+		<a class="modern-page-next" href="http://future-group.ru/personal/support/?login=yes&amp;PAGEN_1=2">След.</a>
+</div> <div class="total">Всего записей: <span>71</span></div></div>
+
+</form>
+
+<div style="display:none">
+
+<div id="view_settings_ticket_grid">
+<table width="100%">
+	<tbody><tr class="section">
+		<td colspan="2">Представление</td>
+	</tr>
+	<tr>
+		<td width="50%" align="right">Название представления:</td>
+		<td><input name="view_name" size="40" maxlength="255" type="text"></td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Колонки списка</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<table>
+				<tbody><tr>
+					<td style="background-image:none" nowrap="nowrap">
+						<div style="margin-bottom:5px">Доступные колонки:</div>
+						<select style="min-width:150px;" name="view_all_cols" multiple="multiple" size="12" ondblclick="this.form.add_btn.onclick()" onchange="this.form.add_btn.disabled = (this.selectedIndex == -1)">
+						</select>
+					</td>
+					<td style="background-image:none">
+						<div style="margin-bottom:5px"><input name="add_btn" value="&gt;" title="Добавить колонку" style="width:30px;" disabled="disabled" onclick="jsSelectUtils.addSelectedOptions(this.form.view_all_cols, this.form.view_cols, false); jsSelectUtils.deleteSelectedOptions(this.form.view_all_cols); " type="button"></div>
+						<div style="margin-bottom:5px"><input name="del_btn" value="&lt;" title="Удалить колонку" style="width:30px;" disabled="disabled" onclick="jsSelectUtils.addSelectedOptions(this.form.view_cols, this.form.view_all_cols, false, true); jsSelectUtils.deleteSelectedOptions(this.form.view_cols);" type="button"></div>
+					</td>
+					<td style="background-image:none" nowrap="nowrap">
+						<div style="margin-bottom:5px">Выбранные колонки:</div>
+						<select style="min-width:150px;" name="view_cols" multiple="multiple" size="12" ondblclick="this.form.del_btn.onclick()" onchange="this.form.del_btn.disabled = this.form.up_btn.disabled = this.form.down_btn.disabled = (this.selectedIndex == -1)">
+						</select>
+					</td>
+					<td style="background-image:none">
+						<div style="margin-bottom:5px"><input name="up_btn" value="Выше" title="Переместить выше в списке" class="bx-grid-btn" style="width:60px;" disabled="disabled" onclick="jsSelectUtils.moveOptionsUp(this.form.view_cols)" type="button"></div>
+						<div style="margin-bottom:5px"><input name="down_btn" value="Ниже" title="Переместить ниже в списке" class="bx-grid-btn" style="width:60px;" disabled="disabled" onclick="jsSelectUtils.moveOptionsDown(this.form.view_cols)" type="button"></div>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Сортировка по умолчанию</td>
+	</tr>
+	<tr>
+		<td align="right">Упорядочить по умолчанию по полю:</td>
+		<td><select name="view_sort_by">
+			<option selected="selected" value="">(по умолчанию)</option>
+			<option value="s_lamp">Инд.</option>
+			<option value="s_id">ID</option>
+			<option value="s_timestamp_x">Изменено</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td align="right">Направление сортировки:</td>
+		<td><select name="view_sort_order">
+			<option selected="selected" value="">(по умолчанию)</option>
+			<option value="asc">По возрастанию</option>
+			<option value="desc">По убыванию</option>
+		</select></td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Постраничная навигация</td>
+	</tr>
+	<tr>
+		<td width="50%" align="right">Количество записей на странице:</td>
+		<td><select name="view_page_size">
+			<option selected="selected" value="10">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="200">200</option>
+		</select></td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Сохраненный фильтр</td>
+	</tr>
+	<tr>
+		<td align="right">Применить сохраненный фильтр:</td>
+		<td><select name="view_filters">
+		</select></td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Общие настройки</td>
+	</tr>
+	<tr>
+		<td colspan="2"><span class="customCheckbox"></span><input name="set_default_settings" id="set_default_settings_ticket_grid" onclick="BX('delete_users_settings_ticket_grid').disabled = !this.checked;" type="checkbox"><label for="set_default_settings_">Установить данные настройки по умолчанию</label></td>
+	</tr>
+	<tr>
+		<td colspan="2"><span class="customCheckbox"></span><input name="delete_users_settings" id="delete_users_settings_ticket_grid" disabled="disabled" type="checkbox"><label for="delete_users_settings_ticket_grid">Заменить все настройки пользователей данными настройками</label></td>
+	</tr>
+</tbody></table>
+</div>
+
+<div id="views_list_ticket_grid">
+<div style="float:left; width:80%">
+<select name="views_list" size="17" style="width:100%; height:250px;" ondblclick="this.form.views_edit.onclick()">
+	<option value="default" selected="selected">&lt;Представление по умолчанию&gt;</option>
+</select>
+</div>
+<div style="width:20%;float:left;">
+	<div style="margin-left:5px;">
+	<div style="margin-bottom:5px"><input name="views_add" value="Добавить" title="Добавить новое представление" style="width:100%;" onclick="bxGrid_ticket_grid.AddView()" type="button"></div>
+	<div style="margin-bottom:5px"><input name="views_edit" value="Изменить" title="Изменить выбранное представление" style="width:100%;" onclick="if(this.form.views_list.value) bxGrid_ticket_grid.EditView(this.form.views_list.value)" type="button"></div>
+	<div style="margin-bottom:5px"><input name="views_delete" value="Удалить" title="Удалить выбранное представление" style="width:100%;" onclick="if(this.form.views_list.value) bxGrid_ticket_grid.DeleteView(this.form.views_list.value)" type="button"></div>
+	</div>
+</div>
+</div>
+
+<div id="filter_settings_ticket_grid">
+<table width="100%">
+	<tbody><tr class="section">
+		<td colspan="2">Название фильтра</td>
+	</tr>
+	<tr>
+		<td width="40%" align="right">Название:</td>
+		<td><input name="filter_name" size="40" maxlength="255" type="text"></td>
+	</tr>
+	<tr class="section">
+		<td colspan="2">Поля фильтра</td>
+	</tr>
+	<tr>
+		<td align="right">ID обращения:</td>
+		<td>
+<input name="ID" size="30" type="text">
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Индикатор:</td>
+		<td>
+<select name="LAMP[]" size="4" multiple="multiple">
+	<option value="">(нет)</option>
+	<option value="red">красный</option>
+	<option value="green">зеленый</option>
+	<option value="grey">серый</option>
+</select>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Закрыто/открыто:</td>
+		<td>
+<select name="CLOSE">
+	<option selected="selected" value="">(все)</option>
+	<option value="Y">закрыто</option>
+	<option value="N">открыто</option>
+</select>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Заголовок / Текст сообщения:</td>
+		<td>
+<input name="MESSAGE" size="30" type="text">
+		</td>
+	</tr>
+</tbody></table>
+</div>
+
+<div id="filters_list_ticket_grid">
+<div style="float:left; width:80%">
+<select name="filters_list" size="17" style="width:100%; height:250px;" ondblclick="if(this.value) this.form.filters_edit.onclick()">
+</select>
+</div>
+<div style="width:20%;float:left;">
+	<div style="margin-left:5px;">
+	<div style="margin-bottom:5px"><input name="filters_add" value="Добавить" title="Добавить сохраненный фильтр" style="width:100%;" onclick="bxGrid_ticket_grid.AddFilter()" type="button"></div>
+	<div style="margin-bottom:5px"><input name="filters_edit" value="Изменить" title="Изменить сохраненный фильтр" style="width:100%;" onclick="if(this.form.filters_list.value) bxGrid_ticket_grid.EditFilter(this.form.filters_list.value)" type="button"></div>
+	<div style="margin-bottom:5px"><input name="filters_delete" value="Удалить" title="Удалить сохраненный фильтр" style="width:100%;" onclick="if(this.form.filters_list.value) bxGrid_ticket_grid.DeleteFilter(this.form.filters_list.value)" type="button"></div>
+	</div>
+</div>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+var settingsDialogticket_grid;
+var viewsDialogticket_grid;
+var filtersDialogticket_grid;
+var filterSettingsDialogticket_grid;
+
+jsDD.Reset();
+
+if(!window['bxGrid_ticket_grid'])
+	bxGrid_ticket_grid = new BxInterfaceGrid('ticket_grid');
+
+bxGrid_ticket_grid.oActions = [[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/90/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/90/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/87/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/87/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/88/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/88/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/74/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/74/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/70/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/70/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/91/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/91/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/89/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/89/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/61/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/61/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/78/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/78/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/63/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/63/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/86/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/86/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/83/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/83/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/85/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/85/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/81/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/81/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/84/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/84/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/57/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/57/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/76/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/76/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/80/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/80/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/54/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/54/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/75/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/75/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/79/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/79/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/65/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/65/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/77/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/77/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/51/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/51/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/69/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/69/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/67/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/67/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/72/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/72/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/64/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/64/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/71/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/71/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/68/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/68/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/73/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/73/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/66/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/66/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/49/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/49/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/48/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/48/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/62/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/62/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/60/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/60/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/11/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/11/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/58/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/58/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/55/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/55/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/38/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/38/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/59/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/59/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/47/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/47/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/53/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/53/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/56/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/56/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/44/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/44/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/46/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/46/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/50/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/50/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/52/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/52/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/45/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/45/\');'}],[{'ICONCLASS':'edit','TEXT':'Изменить','DEFAULT':true,'ONCLICK':'BX.ajax.AJAX_ID = \'\'; var url = \'/personal/support/43/\'; if(BX.ajax.AJAX_ID != \'\') BX.ajax.insertToNode(url+(url.indexOf(\'?\') == -1? \'?\':\'&\')+\'bxajaxid=\'+BX.ajax.AJAX_ID, \'comp_\'+BX.ajax.AJAX_ID); else jsUtils.Redirect(arguments, \'/personal/support/43/\');'}]];
+bxGrid_ticket_grid.oColsMeta = {'LAMP':{'editable':false,'type':'text'},'ID':{'editable':false,'type':'text'},'TITLE':{'editable':false,'type':'text'},'TIMESTAMP_X':{'editable':false,'type':'text'},'MODIFIED_BY':{'editable':false,'type':'text'},'MESSAGES':{'editable':false,'type':'text'},'STATUS_NAME':{'editable':false,'type':'text'}};
+bxGrid_ticket_grid.oEditData = [];
+bxGrid_ticket_grid.oColsNames = {'LAMP':'Инд.','ID':'ID','TITLE':'Заголовок','TIMESTAMP_X':'Изменено','MODIFIED_BY':'Кто изменил','MESSAGES':'Сооб.','STATUS_NAME':'Статус'};
+bxGrid_ticket_grid.oOptions = {'views':{'default':{'columns':'','name':'<Представление по умолчанию>','sort_by':'by','sort_order':'order','page_size':'20'}},'filters':[],'current_view':'default','filter_rows':'ID,LAMP,CLOSE','theme':'grey','filter_shown':'Y'};
+bxGrid_ticket_grid.vars = {'mess':{'calend_title':'Выбрать дату в календаре','for_all_confirm':'Применить действие для всех записей списка, в том числе на других страницах?','settingsTitle':'Настройка представления списка','settingsSave':'Сохранить','viewsTitle':'Управление представлениями','viewsApply':'Применить','viewsApplyTitle':'Применить выбранное представление','viewsNoName':'<Без названия>','viewsNewView':'<Новое представление>','viewsDelete':'Удалить представление?','viewsFilter':'(выберите фильтр)','filtersTitle':'Сохраненные фильтры','filtersApply':'Применить','filtersApplyTitle':'Применить выбранный сохраненный фильтр','filtersNew':'<Новый фильтр>','filtersDelete':'Удалить сохраненный фильтр?','filterSettingsTitle':'Настройка сохраненного фильтра','filterHide':'Свернуть в заголовок','filterShow':'Развернуть из заголовка','filterApplyTitle':'Применить сохраненный фильтр'},'ajax':{'AJAX_ID':'','AJAX_OPTION_SHADOW':false},'settingWndSize':{'width':'','height':''},'viewsWndSize':{'width':'500','height':'350'},'filtersWndSize':{'width':'500','height':'350'},'filterSettingWndSize':{'width':'','height':''},'calendar_image':'/bitrix/templates/future-group_new/components/bitrix/main.interface.grid/future/images/calendar.gif','server_time':'1416242248','component_path':'/bitrix/main.interface.grid','template_path':'/bitrix/templates/future-group_new/components/bitrix/main.interface.grid/future','sessid':'30ae1f3da3ab7ca7e257bf508fa5ac7e','current_url':'/personal/support/?login=yes','user_authorized':true};
+bxGrid_ticket_grid.menu = new PopupMenu('bxMenu_ticket_grid', 1010);
+bxGrid_ticket_grid.settingsMenu = [
+	{'TEXT': 'Настроить список...', 'TITLE': 'Настроить текущее представление списка', 'DEFAULT':true, 'ONCLICK':'bxGrid_ticket_grid.EditCurrentView()', 'DISABLED':false, 'ICONCLASS':'grid-settings'},
+	{'TEXT': 'Колонки списка', 'TITLE': 'Выбрать колонки в текущем представлении', 'MENU':[
+		{'TEXT': 'Инд.', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'LAMP\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'ID', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'ID\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'Заголовок', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'TITLE\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'Изменено', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'TIMESTAMP_X\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'Кто изменил', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'MODIFIED_BY\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'Сооб.', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'MESSAGES\', this)', 'AUTOHIDE':false},
+		{'TEXT': 'Статус', 'TITLE': 'Показать/скрыть','ICONCLASS':'checked', 'ONCLICK':'bxGrid_ticket_grid.CheckColumn(\'STATUS_NAME\', this)', 'AUTOHIDE':false},
+		{'SEPARATOR': true},
+		{'TEXT': 'Применить', 'TITLE': 'Перестроить список', 'ONCLICK':'bxGrid_ticket_grid.ApplySaveColumns()'}
+	], 'DISABLED':false},
+	{'SEPARATOR': true},
+	{'TEXT': '&lt;Представление по умолчанию&gt;', 'TITLE': 'Выбрать режим просмотра', 'ICONCLASS':'checked', 'DISABLED':false, 'ONCLICK':'bxGrid_ticket_grid.SetView(\'default\')'},
+	{'SEPARATOR': true},
+	{'TEXT': 'Представления...', 'TITLE': 'Управление режимами просмотра', 'ONCLICK':'bxGrid_ticket_grid.ShowViews()', 'DISABLED':false, 'ICONCLASS':'grid-views'}
+	, {'TEXT': 'Цветовая схема', 'TITLE': 'Выбрать цветовую схему списка', 'CLASS': 'bx-grid-themes-menu-item', 'MENU':[
+		{'TEXT': 'Голубая', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'lightblue\')'}
+		,{'TEXT': 'Зеленая', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'green\')'}
+		,{'TEXT': 'Коричневая', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'brown\')'}
+		,{'TEXT': 'Красная', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'red\')'}
+		,{'TEXT': 'Светло-серая', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'lightgrey\')'}
+		,{'TEXT': 'Серая', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'grey\')', 'ICONCLASS':'checked'}
+		,{'TEXT': 'Синяя', 'ONCLICK': 'bxGrid_ticket_grid.SetTheme(this, \'blue\')'}
+	], 'DISABLED':false, 'ICONCLASS':'grid-themes'}
+];
+
+BX.ready(function(){bxGrid_ticket_grid.InitTable()});
+
+bxGrid_ticket_grid.oFilterRows = {'ID':true,'LAMP':true,'CLOSE':true,'MESSAGE':false};
+bxGrid_ticket_grid.filterMenu = [
+	{'TEXT': 'Условия поиска', 'TITLE': 'Показать/скрыть условия поиска', 'MENU':[
+		{'ID':'flt_ticket_grid_ID', 'TEXT': 'ID обращения', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRow(\'ID\', this)', 'AUTOHIDE':false, 'ICONCLASS':'checked'},
+		{'ID':'flt_ticket_grid_LAMP', 'TEXT': 'Индикатор', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRow(\'LAMP\', this)', 'AUTOHIDE':false, 'ICONCLASS':'checked'},
+		{'ID':'flt_ticket_grid_CLOSE', 'TEXT': 'Закрыто/открыто', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRow(\'CLOSE\', this)', 'AUTOHIDE':false, 'ICONCLASS':'checked'},
+		{'ID':'flt_ticket_grid_MESSAGE', 'TEXT': 'Заголовок / Текст сообщения', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRow(\'MESSAGE\', this)', 'AUTOHIDE':false},
+		{'SEPARATOR': true},
+		{'TEXT': 'Показать все условия', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRows(true)'},
+		{'TEXT': 'Скрыть все условия', 'ONCLICK':'bxGrid_ticket_grid.SwitchFilterRows(false)'}
+	]},
+	{'SEPARATOR': true},
+	{'TEXT': 'Сохраненные фильтры...', 'TITLE': 'Управление сохраненными фильтрами', 'ONCLICK':'bxGrid_ticket_grid.ShowFilters()', 'DISABLED':false, 'ICONCLASS':'grid-filters'},
+	{'TEXT': 'Сохранить как...', 'TITLE': 'Сохранить текущий фильтр', 'ONCLICK':'bxGrid_ticket_grid.AddFilterAs()', 'DISABLED':true}
+];
+
+BX.ready(function(){bxGrid_ticket_grid.InitFilter()});
+
+phpVars.messLoading = 'Загрузка...';
+</script></div>
+</div>
+<div class="grey-line"></div>
+<div class="row">
+    <div class="columns">
+
+
+    <table class="support-ticket-hint">
+        <tbody><tr>
+            <td>
+                <div class="support-lamp-red"></div>
+            </td>
+            <td> - последний раз в обращение писал клиент техподдержки (вы ответственный)</td>
+        </tr>
+                    <tr>
+                <td>
+                    <div class="support-lamp-yellow"></div>
+                </td>
+                <td> - последний раз в обращение писал клиент техподдержки (вы не ответственный)</td>
+            </tr>
+                <tr>
+            <td>
+                <div class="support-lamp-green"></div>
+            </td>
+            <td> - последний раз в обращение писали вы</td>
+        </tr>
+                    <tr>
+                <td>
+                    <div class="support-lamp-green-s"></div>
+                </td>
+                <td> - последний раз в обращение писал сотрудник техподдержки</td>
+            </tr>
+                <tr>
+            <td>
+                <div class="support-lamp-grey"></div>
+            </td>
+            <td> - обращение закрыто</td>
+        </tr>
+    </tbody></table>
+</div>
+</div>
+ 
+				<div class="page-buffer"></div>			</section>
+							<div id="footer">
+					<div class="row">
+						<div class="columns medium-2 large-2">
+							<img data-uuid="svHYi1vnEh26-fx9ixf-MRkDpz-0CH6W9-TJiNEe7RAq5AMq9t7c" data-interchange="[/bitrix/templates/future-group_new/images/icons/flogo.png, (default)], [/bitrix/templates/future-group_new/images/icons/flogo2x.png, (retina)]" src="%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0_files/flogo.png" alt="Future Internet Agency" width="101">
+							<noscript><img src="/bitrix/templates/future-group_new/images/icons/flogo.png" width="101" alt="Future Internet Agency"/></noscript>
+						</div>
+						<div class="columns medium-10 large-10">
+							<ul>
+								<li>Телефон: +7 499 340-94-71</li>
+								<li>Email: <a href="mailto:info@future-group.ru">info@future-group.ru</a></li>
+								<li>Адрес: <a href="http://future-group.ru/contact/">115088 Москва, ул. 2-я Машиностроения, д. 7 стр. 1</a></li>
+								<li>&nbsp;</li>
+								<li class="nobold">© 2010 - 2014 Future. Все права защищены. Любое копирование информации запрещено.</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+		<!--<script src="/js/future/jquery.scrollTo.min.js"></script>--><script>
+    $(document).foundation({
+        equalizer : {
+            // Specify if Equalizer should make elements equal height once they become stacked.
+            equalize_on_stack: false
+        }
+    });
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter6988945 = new Ya.Metrika({id:6988945,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/6988945" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="adm-informer" id="admin-informer" style="display: none; top:48px; left:316px;" onclick="return BX.adminInformer.OnInnerClick(event);">
+	<div class="adm-informer-header">Новые уведомления</div>
+		<div class="adm-informer-item adm-informer-item-peach" style="display:block">
+			<div class="adm-informer-item-title">
+				Резервное копирование
+			</div>
+			<div class="adm-informer-item-body">
+				<div class="adm-informer-item-html" id="adm-informer-item-html-0">
+					
+				<div class="adm-informer-item-section">
+					<span class="adm-informer-item-l">
+						<span class="adm-informer-strong-text">Всего:</span> 10 ГБ
+					</span>
+					<span class="adm-informer-item-r">
+							<span class="adm-informer-strong-text">Доступно:</span> 9 ГБ
+					</span>
+				</div>
+				<div class="adm-informer-status-bar-block">
+					<div class="adm-informer-status-bar-indicator" style="width:11%; "></div>
+					<div class="adm-informer-status-bar-text">11%</div>
+				</div>
+			<span class="adm-informer-strong-text">Выполнялось: 7 суток назад.</span>
+					<span class="adm-informer-icon"></span>
+				</div>
+				<div class="adm-informer-item-footer" id="adm-informer-item-footer-0">
+				<a href="http://future-group.ru/bitrix/admin/dump.php?lang=ru">Рекомендуется выполнить</a>
+				</div>
+			</div>
+		</div>
+		<div class="adm-informer-item adm-informer-item-blue" style="display:block">
+			<div class="adm-informer-item-title">
+				Сканер безопасности
+			</div>
+			<div class="adm-informer-item-body">
+				<div class="adm-informer-item-html" id="adm-informer-item-html-1">
+					
+<div class="adm-informer-item-section">
+	<span class="adm-informer-item-l">
+		<span>Сканирование выполнялось очень давно либо не выполнялось вовсе</span>
+	</span>
+</div>
+
+					<span class="adm-informer-icon"></span>
+				</div>
+				<div class="adm-informer-item-footer" id="adm-informer-item-footer-1">
+				<a href="http://future-group.ru/bitrix/admin/security_scanner.php?lang=ru">Перейти к сканированию</a>
+				</div>
+			</div>
+		</div>
+		<div class="adm-informer-item adm-informer-item-green" style="display:block">
+			<div class="adm-informer-item-title">
+				Ускорение сайта (CDN)
+			</div>
+			<div class="adm-informer-item-body">
+				<div class="adm-informer-item-html" id="adm-informer-item-html-2">
+					
+				<div class="adm-informer-item-section">
+					<span class="adm-informer-strong-text">Отключено.</span>
+				</div>
+				<div class="adm-informer-status-bar-block">
+					<div class="adm-informer-status-bar-indicator" style="width:0%; "></div>
+					<div class="adm-informer-status-bar-text">0%</div>
+				</div>
+			
+					<span class="adm-informer-icon"></span>
+				</div>
+				<div class="adm-informer-item-footer" id="adm-informer-item-footer-2">
+				<a href="http://future-group.ru/bitrix/admin/bitrixcloud_cdn.php?lang=ru">Включить ускорение сайта</a>
+				</div>
+			</div>
+		</div>
+		<div class="adm-informer-item adm-informer-item-gray" style="display:none">
+			<div class="adm-informer-item-title">
+				Обновления
+			</div>
+			<div class="adm-informer-item-body">
+				<div class="adm-informer-item-html" id="adm-informer-item-html-3">
+					<span class="adm-informer-strong-text">Версия системы 14.9.4</span><br>Последнее обновление<br>11.11.2014 15:31
+					<span class="adm-informer-icon"></span>
+				</div>
+				<div class="adm-informer-item-footer" id="adm-informer-item-footer-3">
+				<a href="http://future-group.ru/bitrix/admin/update_system.php?refresh=Y&amp;lang=ru">Проверить обновления</a>
+				</div>
+			</div>
+		</div>
+		<div class="adm-informer-item adm-informer-item-blue" style="display:none">
+			<div class="adm-informer-item-title">
+				Проактивная защита
+			</div>
+			<div class="adm-informer-item-body">
+				<div class="adm-informer-item-html" id="adm-informer-item-html-4">
+					
+<div class="adm-informer-item-section">
+	<span class="adm-informer-item-l">
+		<span class="adm-informer-strong-text">Защита включена.<br></span>
+		<span>Попыток вторжения не обнаружено</span>
+	</span>
+</div>
+
+					<span class="adm-informer-icon"></span>
+				</div>
+				<div class="adm-informer-item-footer" id="adm-informer-item-footer-4">
+				<a href="http://future-group.ru/bitrix/admin/security_filter.php?lang=ru">Настроить защиту</a>
+				</div>
+			</div>
+		</div>
+	<a href="javascript:void(0);" class="adm-informer-footer adm-informer-footer-collapsed" hidefocus="true" id="adm-informer-footer" onclick="return BX.adminInformer.ToggleExtra();">Показать все (5) </a>
+	<span class="adm-informer-arrow"></span>
+</div></body></html>
