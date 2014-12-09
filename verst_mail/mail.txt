@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail from future</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+
+@media screen and (max-width: 600px) {
+    .padding {
+        width: 15px !important;
+    }
+
+    .wrapper{
+        padding: 20px 0 !important;
+    }
+    .hide-for-sm{
+        display: none !important;
+    }
+    .text {
+        padding-bottom: 0 !important;
+    }
+}
+
+    </style>
+</head>
+<body style="padding: 0px;margin: 0;font-family: Lucida Grande,Lucida Sans,Lucida Sans Unicode,Arial,Helvetica,Verdana,sans-serif;">
+    <table class="wrapper" style="max-width: 898px;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 10px solid #e1e1e1;padding: 74px 0 64px;margin: 0 auto;">
+      <tr>
+         <td class="padding" style="width: 88px;"></td>
+          <td>
+             <table>
+               <tr>
+           <td class="header" style="text-align: center;padding-bottom: 28px;">
+               <img width="163" height="172" src="cid:future-logo-for-mail.png" alt="future">
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <h1 style="margin: 0;padding: 0;font-weight: 300;font-size: 36px;line-height: 48px;color: black;">
+                    Изменения в обращении # #ID# к службе техподдержки сайта #SERVER_NAME#.
+                </h1>
+           </td>
+       </tr>
+        <tr>
+            <td class="text" style="color: #000000;font-size: 14px;font-weight: 300;line-height: 24px;padding-bottom: 80px;">
+                
+
+            
+            #SPAM_MARK#<br/>
+            #WHAT_CHANGE#<br/>
+            Тема: #TITLE# <br/>
+
+            От кого: #MESSAGE_SOURCE##MESSAGE_AUTHOR_SID##MESSAGE_AUTHOR_TEXT#<br/>
+
+            <hr style="color: #e1e1e1;background-color: #e1e1e1;height: 1px;width: 100%;border: none;">
+            #FILES_LINKS#<br/>
+            #MESSAGE_BODY#<br/>
+            <hr style="color: #e1e1e1;background-color: #e1e1e1;height: 1px;width: 100%;border: none;">
+
+            Автор    - #SOURCE##OWNER_SID##OWNER_TEXT#<br/>
+            Создано  - #CREATED_TEXT##CREATED_MODULE_NAME# [#DATE_CREATE#]<br/>
+            Изменено - #MODIFIED_TEXT##MODIFIED_MODULE_NAME# [#TIMESTAMP#]<br/>
+
+            Ответственный     - #RESPONSIBLE_TEXT#<br/>
+            Категория         - #CATEGORY#<br/>
+            Критичность       - #CRITICALITY#<br/>
+            Статус            - #STATUS#<br/>
+            Оценка ответов    - #RATE#<br/>
+            Уровень поддержки - #SLA#<br/>
+            <br/>
+
+<hr style="color: #e1e1e1;background-color: #e1e1e1;height: 1px;width: 100%;border: none;">
+#SUPPORT_COMMENTS#
+<hr style="color: #e1e1e1;background-color: #e1e1e1;height: 1px;width: 100%;border: none;">
+
+            Для просмотра и редактирования обращения воспользуйтесь ссылкой:<br/>
+            http://#SERVER_NAME##ADMIN_EDIT_URL#?ID=#ID#&lang=#LANGUAGE_ID#<br/>
+
+            Письмо сгенерировано автоматически.
+
+            </td>
+        </tr>
+        <tr class="footer" style="font-size: 12px;line-height: 20px;font-weight: 700;">
+            <td>
+               <table>
+                   <tr>
+                       <td class="logo hide-for-sm" style="float: left;margin-right: 37px;width: 101px;height: 106px;">
+                           <img src="cid:future-logo-for-mail.png" height="106" width="101" alt="Future">
+                       </td>
+                       <td class="mt" style="padding-top: 18px;">
+                           Телефон: +7 499 340-94-71<br>
+            Email: info@future-group.ru<br>
+            Адрес: 115088 Москва, ул. 2-я Машиностроения, д. 7 стр. 1<span class="copy" style="font-weight: 300;margin-top: 11px;display: block;">
+                © 2010 - 2014 Future. Все права защищены
+            </span>
+                       </td>
+                   </tr>
+               </table>
+            </td>
+        </tr>
+              </table>
+          </td>
+
+          <td class="padding" style="width: 88px;"></td>
+      </tr>
+
+    </table>
+</body>
+</html>
