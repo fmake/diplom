@@ -1,0 +1,93 @@
+<!-- Inliner Build Version 4380b7741bb759d6cb997545f3add21ad48f010b -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Mail from future</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body style="margin: 0; padding: 0px;">
+<style type="text/css">
+@media screen and (max-width: 600px) {
+  .padding {
+    width: 15px !important;
+  }
+  .wrapper {
+    padding: 20px 0 !important;
+  }
+  .hide-for-sm {
+    display: none !important;
+  }
+  .text {
+    padding-bottom: 0 !important;
+  }
+}
+</style>
+    <table class="wrapper" style="max-width: 898px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: Arial,Helvetica,Verdana,sans-serif; background: url(balls.jpg) no-repeat 95% 0; margin: 0 auto; padding: 74px 0 32px; border: 10px solid #e1e1e1;" background="url(balls.jpg)"><tr>
+<td class="padding" style="width: 88px;"></td>
+          <td>
+             <table>
+<tr>
+<td class="header" style="text-align: center; padding-bottom: 28px;" align="center">
+               <img src="future-logo-for-mail.png" width="170" alt="future">
+</td>
+       </tr>
+<tr>
+<td>
+               <h1 style="font-weight: 300; font-size: 36px; line-height: 48px; color: black; margin: 0; padding: 0;">
+                    Поздравляем с наступающим 2015 годом!
+                </h1>
+           </td>
+       </tr>
+<tr>
+<td class="text" style="color: #000000; font-size: 14px; font-weight: 300; line-height: 24px; padding-bottom: 60px;">
+                 Добрый день!<br>
+Ваше обращение <span class="bolder" style="font-weight: 700;">№471158</span> автоматически закрыто (тема: «Вывести в фильтре поле "Дата документа отгрузки"»). <br>
+Это произошло потому, что после ответа поддержки вы не задали дополнительных вопросов в течение недели. Мы предполагаем, что такие обращения решены.<br>
+Если вы хотите продолжить обсуждение, откройте обращение:<br><hr style="color: #e1e1e1; margin-top:20px; height: 1px; width: 100%; background: #e1e1e1; border: none;">
+<table><tbody><tr>
+<td>
+                <img src="xmas.png" alt="Подарок">
+</td>
+            <td class="xmas" style="line-height: 36px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">
+                <div class="f20" style="font-size: 20px;">
+                    1. Купон на 1 час работы в январе
+                </div>
+                <div class="f16" style="font-size: 16px; font-weight: 700;">SUP-COU-RSGCTYG3JL</div>
+                <div class="f20" style="font-size: 20px;">
+                    2. Купон на спец. обращение
+                </div>
+                <div class="f16" style="font-size: 16px; font-weight: 700;">SUP-COU-RSGCTYG3JL</div>
+            </td>
+        </tr></tbody></table>
+<hr style="color: #e1e1e1; height: 1px; width: 100%; margin-bottom: 20px; background: #e1e1e1; border: none;">
+Прошу вас оценить нашу работу<br>
+(нажмите на ссылку, авторизация не потребуется)<br>
+Если вы довольны работой службы поддержки, нажмите <a href="#" style="color: #409c62; font-weight: 700;">Решение устраивает.</a><br>
+Если вас не устраивает, как решался ваш вопрос, выберите <a href="#" style="color: #409c62; font-weight: 700;">Отрицательную оценку.</a><br>
+</td>
+        </tr>
+<tr class="footer" style="font-size: 12px; line-height: 20px; font-weight: 700;">
+<td>
+               <table><tr>
+<td class="logo hide-for-sm" style="float: left; margin-right: 37px; width: 101px; height: 106px;">
+                           <img src="future-logo-for-mail.png" height="106" width="101" alt="Future">
+</td>
+                       <td class="mt" style="padding-top: 18px;">
+                           Телефон: (499) 340-94-71<br>
+            Email: info@future-group.ru<br>
+            Адрес: 115088 Москва, ул. 2-я Машиностроения, д. 7 стр. 1<span class="copy" style="font-weight: 300; margin-top: 11px; display: block;">
+                © 2010 - 2014 Future. Все права защищены
+            </span>
+                       </td>
+                   </tr></table>
+</td>
+        </tr>
+</table>
+</td>
+          
+          <td class="padding" style="width: 88px;"></td>
+      </tr></table>
+</body>
+</html>
